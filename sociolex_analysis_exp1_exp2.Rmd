@@ -1374,7 +1374,7 @@ sociolex_ratings_summary <- sociolex_ratings_summary %>%
 
 ```{r}
 write_delim(sociolex_ratings_summary,
-            "sociolex_data/sociolex_data_summary.csv",
+            "sociolex_data/summary/sociolex_data_summary.csv",
             delim = ",")
 
 write_delim(sociolex_ratings_proportion_age_pca %>%
@@ -1382,11 +1382,11 @@ write_delim(sociolex_ratings_proportion_age_pca %>%
                      n_mode = n) %>%
               left_join(words_coding) %>%
               select(-sum),
-            "sociolex_data/sociolex_data_summary_age_words.csv",
+            "sociolex_data/summary/sociolex_data_summary_age_words.csv",
             delim = ",")
 
 write_delim(sociolex_ratings_summary_proportions,
-            "sociolex_data/sociolex_data_summary_proportions.csv",
+            "sociolex_data/summary/sociolex_data_summary_proportions.csv",
             delim = ",")
 
 ```
