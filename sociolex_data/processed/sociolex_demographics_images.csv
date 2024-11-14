@@ -1,0 +1,456 @@
+Response_ID,Progress,duration,participant_gender_category,participant_gender_category_other,participant_age,participant_language,participant_language_other,participant_education,participant_gender_scale,participant_political_scale,participant_optimism_scale,participant_location_scale,Device,survey_version,timing_gender,timing_valence,timing_political,timing_location,timing_age,version,participant_sample
+R_3iQMPPBugxvsq8W,100,2019,female,NA,23,Czech,NA,university,2,0,1,-1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_V3vbVPth05xfYNX,100,1573,non-binary,NA,22,Czech,NA,high school,-2,-1,1,3,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_tSBvl59deSfAIfv,100,1501,female,NA,22,Czech,NA,high school,3,0,2,0,mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_1FbvgWrCytQI6NC,100,2676,male,NA,21,Czech,NA,high school,-2,-1,-2,2,mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_3hygqodEv1N6EWI,100,3879,female,NA,20,Czech,NA,high school,2,-2,1,-1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_265SBY2Ax1c9UqF,100,3680,female,NA,19,Czech,NA,high school,1,-2,-2,2,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_242DQwha4HAD81x,100,1645,male,NA,20,Czech,NA,high school,-2,-2,-1,1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_1GIdhX0fBwXW6sX,100,1903,female,NA,21,Czech,NA,high school,1,-1,0,-1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_2X51nyLCLGowzf9,100,1277,female,NA,22,Czech,NA,high school,3,0,1,0,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_p62Sh0AIVKdwU9z,100,2090,female,NA,21,Czech,NA,high school,3,-1,1,1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_ABPV2XrcOTULb2N,100,2063,female,NA,23,Czech,NA,university,2,0,0,-1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_10OiqxNeGYpNav1,100,2329,female,NA,20,Czech,NA,high school,3,0,-2,-1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_wNNSCxuU0raIQjT,100,2238,female,NA,25,Czech,NA,high school,2,0,2,-3,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_3Ho9lJVDi2upapF,100,2411,female,NA,19,Czech,NA,high school,1,-1,2,-1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_2THmy6rgi5PSCoB,100,2780,male,NA,23,Czech,NA,university,0,-1,0,3,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_22IXac8CbnnL0T5,100,1141,female,NA,22,Czech,NA,university,3,2,-1,-2,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_1rvs45nxOU9aurv,100,2839,female,NA,24,Czech,NA,high school,1,-3,-3,1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_1obY538EmbmAsW0,100,2268,female,NA,24,Czech,NA,university,3,1,2,1,mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_33sEA9yBE2ktLFD,100,1138,female,NA,21,Czech,NA,high school,3,0,1,-2,mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_3m8hunklcwCNkw1,100,1466,female,NA,26,Czech,NA,university,2,-2,0,3,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_3dEoEz2HmN7VNzL,100,1283,female,NA,23,Czech,NA,university,3,-2,0,-2,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_3oQOIwO1EY3KFt7,100,1653,female,NA,22,Czech,NA,high school,3,0,0,0,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_cMIakhzVIniKikh,100,1734,female,NA,20,Czech,NA,high school,2,-1,0,0,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_2Tt8WgheusiCFLV,100,1372,female,NA,20,Czech,NA,high school,3,-1,0,1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_3Nyy65KixdjsGki,100,2115,non-binary,NA,23,Czech,NA,university,0,-2,-1,1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_DxjXfvHQLaxATSx,100,58407,female,NA,24,Czech,NA,university,1,-1,1,1,mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_8CwzjXunCb0Ynmh,100,1471,female,NA,20,Czech,NA,high school,2,0,2,0,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_3oHhj8Tp4qCn08B,100,1059,male,NA,19,Czech,NA,high school,-3,2,0,-2,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_2Yht3zFQnvl77VQ,100,1968,male,NA,20,Czech,NA,high school,-2,2,-1,1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_XhLMOxXSX734BoJ,100,1524,female,NA,20,Czech,NA,high school,2,1,1,1,mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_2OV0gMRdbyWRjMG,100,2400,male,NA,25,Czech,NA,university,-3,-3,0,-1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_3ehtiM5ZKrg2yRf,100,1726,female,NA,22,Czech,NA,high school,2,-2,1,3,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_ToxSL0qttKyJwOJ,100,2775,female,NA,23,Czech,NA,high school,2,-1,1,3,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_2qw54EgRw3jmeuA,100,2385,female,NA,21,Czech,NA,high school,3,0,1,2,mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_3kizMHaQK5XDBpJ,100,1755,female,NA,25,Czech,NA,university,1,-3,2,3,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_1gCPfw2G4TzOkDN,100,1686,female,NA,22,Czech,NA,university,2,-1,0,0,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_3qrFkBLSEZhYjy6,100,3744,female,NA,21,Czech,NA,high school,2,1,2,1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_27BwnT9oL1WmGOl,100,702,female,NA,19,Czech,NA,high school,3,2,1,-1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_1IX9PAujZ4UwgwB,100,98067,male,NA,20,Czech,NA,high school,-2,1,2,-1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_2XjGxR7DEe9Icfq,100,1928,male,NA,20,Czech,NA,high school,-2,-2,1,3,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_0qvZdYYix8mymrf,100,4148,female,NA,23,Czech,NA,university,2,-1,2,2,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_2yq6ce3RCFzvtDo,100,2216,female,NA,26,Czech,NA,university,1,-1,0,1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_2WwEteee1DYiUso,100,1890,female,NA,21,Czech,NA,high school,2,-1,2,2,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_1RhYeVj3CWemjhD,100,2138,female,NA,20,Czech,NA,high school,1,-2,2,1,not_mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_PTl3iBVuWP3vpnP,100,1143,female,NA,22,Czech,NA,high school,3,0,-1,0,mobile,PRIMUS_multipic_01,NA,NA,NA,NA,NA,cz_colour,university
+R_3JqI5YnNlqZzs2s,100,1207,female,NA,21,Czech,NA,high school,2,0,-1,-1,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_2qEGHs7TneIlNkJ,100,1688,female,NA,21,Czech,NA,high school,2,0,2,-1,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_2YMqYNImdgaHzPZ,100,2494,female,NA,24,Czech,NA,university,2,0,0,0,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_24jXQ9hr5FKRCyf,100,1435,female,NA,23,Czech,NA,university,3,-1,-1,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_1d1e6IJO8wA6lIH,100,2079,female,NA,21,Czech,NA,high school,2,0,1,-1,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_3kvQH9j48gUgzlW,100,2072,male,NA,19,Czech,NA,high school,-3,-1,1,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_3OiZlJgahEgYMLN,100,2291,female,NA,20,Czech,NA,high school,3,-1,0,-1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_1DulbRHEn5RnoQs,100,4192,female,NA,20,Czech,NA,high school,2,-1,-1,3,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_3JIZrTf3XVbzbRH,100,5681,female,NA,19,Czech,NA,high school,3,0,1,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_2D6OnqscPHTgXhM,100,1669,female,NA,21,Czech,NA,high school,2,-2,3,-1,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_33rl3AIIeJIsPh9,100,3608,female,NA,24,Czech,NA,university,3,0,0,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_2s78x4cDwasfYhl,100,2639,male,NA,21,Czech,NA,high school,-1,1,1,2,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_2b13be5MHnmykm8,100,13707,female,NA,19,Czech,NA,high school,2,-2,-2,2,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_x5fRRK1PmmMFflT,100,1184,female,NA,21,Czech,NA,high school,2,0,-1,0,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_OfJu3J2aLnDf9ex,100,5313,female,NA,26,Czech,NA,university,2,-1,1,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_28LMs9kF7yuS0oL,100,2328,male,NA,24,Czech,NA,university,-1,-3,1,2,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_2CqYjWAJKSIM3ku,100,1381,female,NA,22,Czech,NA,high school,3,0,1,1,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_1I4zy6jKjkTWwM6,100,1189,female,NA,23,Czech,NA,high school,0,0,2,0,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_20PeCPctR1bbNxH,100,2577,female,NA,19,Czech,NA,high school,0,0,1,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_1pXQLaNY6xNajKQ,99,1336,female,NA,25,Czech,NA,university,3,-2,-1,-1,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_1mw5yFmpr6E8YSx,99,8331,female,NA,22,Czech,NA,high school,2,1,1,-1,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_57NFu0ScNRFMEG5,100,1936,female,NA,20,Czech,NA,high school,2,-2,2,-1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_3k1vVIoyONfw82q,100,76349,female,NA,20,Czech,NA,high school,3,-1,1,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_3EE9R4iJY0epkH6,100,57562,male,NA,21,Czech,NA,high school,-1,-1,1,2,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_0B1zV3S1iElRCCd,100,2473,female,NA,24,Czech,NA,university,2,0,-1,-2,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_1l5m6uJLncKW1jI,100,24199,female,NA,23,Czech,NA,high school,0,0,2,-1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_1GPxzI3ccmc5EU6,100,1870,female,NA,22,Czech,NA,high school,2,-2,1,3,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_1Edq5LoyId5B27m,100,1962,male,NA,20,Czech,NA,high school,-2,0,1,-1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_UbFHgsa0gTlvGql,100,4116,female,NA,19,Czech,NA,high school,3,-1,-1,-1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_31jEbPBFPYjnyNl,100,16567,female,NA,19,Czech,NA,high school,2,-1,1,0,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_3DjpOwNUgTiR1SI,100,2029,male,NA,22,Czech,NA,high school,-2,-1,-2,3,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_1f40jWC60DmdV2P,100,1188,male,NA,21,Czech,NA,high school,-1,0,2,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_1d0rTy2zliIL8z7,100,2504,female,NA,22,Czech,NA,university,2,-1,1,-1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_ALoUyCnWzhUBt0l,100,2303,male,NA,22,Czech,NA,high school,-3,-1,1,1,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_2aLvKiTIXBYCltt,100,2709,female,NA,20,Czech,NA,high school,2,-1,1,1,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_2xysHy1nRgVDO64,100,1967,male,NA,19,Czech,NA,high school,-1,-2,-2,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_1kSlp4FJ8FSbpLq,100,2359,female,NA,25,Czech,NA,university,2,0,1,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_9Eol3oqL12tFRvz,100,1626,male,NA,21,Czech,NA,high school,-2,-2,2,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_3KK3SLxEo7wN17H,100,2010,female,NA,21,Czech,NA,high school,2,-2,1,-1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_0weElxkilmlqlOh,100,1493,female,NA,24,Czech,NA,high school,3,-1,2,2,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_AmNCize4PFYs1oJ,100,2102,female,NA,21,Czech,NA,high school,2,0,-1,0,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_egSJuiKcTCRGW6B,100,2034,male,NA,24,Czech,NA,university,-3,-2,1,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_2dYcUWFezWo8i4m,100,3262,female,NA,22,Czech,NA,university,2,-1,1,-1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_2aLUmeAvkom38oR,100,28191,female,NA,22,Czech,NA,high school,1,0,-1,0,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_3EGRdaBwBrY2NAi,100,1873,female,NA,23,Czech,NA,university,2,-1,2,-1,mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_10TAfb8ArJfe8qr,100,17271,female,NA,21,Czech,NA,high school,2,-2,0,1,not_mobile,PRIMUS_multipic_02,NA,NA,NA,NA,NA,cz_colour,university
+R_BQXV10azED5p7hv,100,1734,female,NA,20,Czech,NA,high school,2,-1,-2,0,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_UgZfvfinQUBC7YZ,100,1844,female,NA,23,Czech,NA,university,2,-1,1,2,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1GNVMKQLv6C5Stl,100,1694,female,NA,21,Czech,NA,high school,1,-1,-1,2,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_2VIOYUKAr7MDbqU,100,3592,female,NA,20,Czech,NA,high school,1,0,1,-1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_yqiMUBwWS0ZQ82R,100,2158,female,NA,21,Czech,NA,high school,2,-1,1,-1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_RV9C75lGxB0lfON,100,5030,female,NA,21,Czech,NA,high school,3,-2,2,1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_Oj7ThGRTybsbA7T,100,4411,female,NA,21,Czech,NA,high school,2,-1,-1,0,mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_tVCaZw5I7ZInWqB,100,1366,female,NA,21,Czech,NA,high school,3,-1,3,-1,mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1C8bLBR1U6jQW8M,100,10129,female,NA,19,Czech,NA,high school,1,-2,-1,-1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1LjHUHFeTZj2ONM,100,1839,female,NA,22,Czech,NA,high school,2,-2,0,-1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_24eCGVZes8jFSVS,100,2814,female,NA,24,Czech,NA,university,2,-2,1,0,mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_30jZ9RPc7yrw9ur,100,2210,female,NA,24,Czech,NA,high school,2,-1,0,2,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_3L119hImOnAFEDy,100,3376,female,NA,21,Czech,NA,high school,2,0,-1,2,mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_2798gG9dBEbDYbY,100,1299,male,NA,20,Czech,NA,high school,-2,-1,1,1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_2R1RuKcYHU02zV4,100,1455,female,NA,20,Czech,NA,high school,2,-1,1,2,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_2dQIWqyCPMfh2i6,100,4495,female,NA,20,Czech,NA,high school,2,-2,0,-1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_3HhpPqUfbUYCZFq,100,7069,female,NA,21,Czech,NA,high school,3,0,1,1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1dErcaw3Flb0qf2,100,3168,male,NA,22,Czech,NA,high school,-2,-2,1,2,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_D7cHdQj91zTtV73,100,1862,female,NA,24,Czech,NA,university,2,0,2,0,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_3McfNnXWYqP8i85,100,1997,female,NA,28,Czech,NA,high school,3,0,-1,-1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1LcY3BWkPAywlZ8,100,1337,male,NA,23,Czech,NA,university,-2,-3,2,2,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_5A0JXyXfVaBZZDP,100,3500,female,NA,22,Czech,NA,high school,2,-1,1,1,mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1K75DW7elBeR65y,100,69082,female,NA,20,Czech,NA,high school,2,0,2,1,mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1oHBMntOdRoHfUU,100,3360,female,NA,20,Czech,NA,high school,-1,0,2,3,mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_3F4BMslFCOvWFYa,100,1712,male,NA,21,Czech,NA,high school,-1,-1,2,-1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_3jUurvSVYl5CB2M,100,1732,female,NA,23,Czech,NA,university,2,-2,-1,1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_3R3Dgq5bu4Z5o9u,100,1699,female,NA,21,Czech,NA,high school,2,0,2,3,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1dKsks5sRyyyWRv,100,2102,female,NA,19,Czech,NA,high school,3,1,1,0,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_3dM5tokw62UwwuL,100,2253,female,NA,20,Czech,NA,high school,2,-1,1,-1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1gRUQ4xVsYamSua,100,639,female,NA,20,Czech,NA,high school,0,-1,1,1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_2YWG9iEcHwV0mgz,100,1770,male,NA,25,Czech,NA,university,0,1,2,-1,mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_3fSLNMIEpUeCpZl,100,1257,female,NA,19,Czech,NA,high school,3,0,-1,-1,mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_3ly7Wh3dBQEM02g,100,10682,female,NA,25,Czech,NA,high school,3,-1,2,-2,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_UT1boyVcGm6PCP7,100,9927,female,NA,24,Czech,NA,high school,3,-2,1,-2,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_25eJVRFLYoPAjaV,100,3685,female,NA,21,Czech,NA,high school,2,-1,1,1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_2Eob8JzVnkTs1AY,100,2166,male,NA,28,Czech,NA,university,-2,1,1,-1,mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_xxOvoNAikTzvAvn,99,3172,female,NA,20,Czech,NA,high school,1,0,2,-1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_YXE7P0AslZrmsH7,99,8993,female,NA,20,Czech,NA,high school,3,-1,1,-1,mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1HktMdd6StwWSto,100,12862,female,NA,23,Czech,NA,high school,2,0,1,1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_2xYlFUgLoYAL8ok,99,2047,female,NA,22,Czech,NA,high school,3,1,-1,-2,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_2SpiyS5roqpIY7c,100,1940,female,NA,21,Czech,NA,high school,1,0,-2,1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1erwoa7hVW1wu71,100,2184,male,NA,22,Czech,NA,high school,-3,2,0,1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_1IfVq4hMi7HqwBN,100,4722,female,NA,22,Czech,NA,high school,3,-3,-1,2,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_vwtwauaPc2QEVP3,100,1464,female,NA,20,Czech,NA,high school,3,0,2,-1,not_mobile,PRIMUS_multipic_03,NA,NA,NA,NA,NA,cz_colour,university
+R_2TnT5DeS9eZLvPu,100,1347,female,NA,24,Czech,NA,university,3,2,2,2,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_AgF4C68Lct32H7z,100,2013,female,NA,22,Czech,NA,high school,2,1,-1,-1,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_2dGvfh0mxfbBxrg,100,2192,female,NA,20,Czech,NA,high school,2,0,-1,-1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_28OMK8uKfBuf0DJ,100,1457,male,NA,22,Czech,NA,high school,-3,-1,0,-1,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_3HZDwlCwIAVBGH3,100,2652,female,NA,19,Czech,NA,high school,2,0,2,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_eyWiANaOyXs9YwV,100,4069,female,NA,23,Czech,NA,high school,2,0,1,0,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_2rToOMdZOhkmSW4,100,3625,female,NA,19,Czech,NA,high school,3,0,-1,3,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_24bWhGRxUrIKnf3,100,1524,female,NA,25,Czech,NA,university,1,-3,0,1,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_2dAzJ10tiAW77Bc,100,3265,female,NA,23,Czech,NA,university,2,-2,1,-1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1pyhmxVJJlHUPzz,100,2708,female,NA,19,Czech,NA,high school,2,1,-1,3,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_28TzTi0cqwe24nb,100,1432,female,NA,23,Czech,NA,university,3,1,1,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_3P4Sv8wPYDL9LmG,100,12186,female,NA,21,Czech,NA,high school,2,-2,2,2,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_2atSOvIjnQ0F1j8,100,1360,female,NA,22,Czech,NA,high school,2,0,-1,0,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_3PY4HjLtD4jQ26x,100,3133,female,NA,25,Czech,NA,university,2,-2,1,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1FbHHjfvc92mNkT,100,3482,female,NA,20,Czech,NA,high school,2,-1,0,2,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_21yOXosdb4qjilX,100,1987,female,NA,20,Czech,NA,high school,0,0,2,0,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_28IOl1Y0rFL1KSd,100,1213,female,NA,20,Czech,NA,high school,2,1,1,2,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_O2T0yoCL7o727Ad,100,3075,female,NA,21,Czech,NA,high school,3,-1,-1,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1lt4vy2BtOkEIym,100,2591,female,NA,21,Czech,NA,high school,2,0,1,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_2vfgPJXFxJDSyLH,100,2196,female,NA,21,Czech,NA,high school,1,1,1,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_3K59v5tGJgW2cPD,100,1674,female,NA,22,Czech,NA,high school,1,0,0,0,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_WdNgnQkKCeAWNr3,100,2252,female,NA,22,Czech,NA,university,3,1,1,1,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_2cbIN44C96wLjL5,100,2520,female,NA,22,Czech,NA,high school,3,0,1,-2,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_0uqXbvma1ZEwVz3,100,1389,female,NA,21,Czech,NA,high school,2,-1,1,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1rBy5VhEJOgtjTe,100,2639,female,NA,19,Czech,NA,high school,3,0,2,0,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_SHSJhl3MY1Wn1YJ,100,2325,female,NA,20,Czech,NA,high school,3,-1,1,-1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_3Ea1smKd6qpuhrX,100,2731,female,NA,29,Czech,NA,university,2,-1,-2,2,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1N2hnIOfjTZcity,100,8908,female,NA,23,Czech,NA,university,3,-2,-1,-2,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_wRBI0rML1VRn0pX,100,2793,female,NA,19,Czech,NA,university,2,-1,-1,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_b8yh3yA1L3pPF8l,100,903,male,NA,20,Czech,NA,university,-3,1,1,-1,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_3D5AuQsAze7WbSS,100,2672,male,NA,20,Czech,NA,high school,-1,-1,-1,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1k0Hjm7NLoeMfUm,100,1902,male,NA,21,Czech,NA,high school,0,-1,1,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1K9M3XojCRuuE2C,100,2187,female,NA,22,Czech,NA,high school,1,-1,1,-1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_RfDjmQr1L71vIdP,100,2585,female,NA,20,Czech,NA,high school,2,-1,1,0,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_3Pv0u4CT45fYbm9,100,2184,female,NA,24,Czech,NA,high school,2,-2,0,1,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1psWsZ5mIIF5qyU,100,2128,female,NA,21,Czech,NA,high school,1,-1,1,1,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_RIaFByRoX0bWJSp,100,2227,female,NA,24,Czech,NA,high school,2,-3,2,2,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_2QhMLg681Enhty4,100,2199,female,NA,21,Czech,NA,high school,3,0,1,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_3NypLfSosycqo1j,99,1244,female,NA,22,Czech,NA,high school,2,-1,0,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_3J8zQmv8hErb4VR,100,2163,female,NA,22,Czech,NA,high school,2,-2,1,-1,mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1P00TjuggPEOQi8,100,2185,female,NA,22,Czech,NA,high school,2,-1,0,-1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1eEJ7srUede4WgO,100,3901,female,NA,25,Czech,NA,university,1,-1,1,1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_3n89551l6WHr9cM,100,2202,female,NA,25,Czech,NA,university,2,0,-1,2,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1rCeO19kfcH8xMF,100,1759,female,NA,23,Czech,NA,university,3,0,-1,-1,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_27gmU6rCtjnteMF,100,2184,female,NA,23,Czech,NA,university,2,-2,2,-2,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_3HFeuWT1UyerrR8,100,1845,female,NA,20,Czech,NA,high school,1,-2,1,0,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_1qUuE8NfJbON4u4,100,1615,female,NA,20,Czech,NA,high school,3,1,1,-3,not_mobile,PRIMUS_multipic_04,NA,NA,NA,NA,NA,cz_colour,university
+R_sNlxNRUmBWpXL8t,100,1603,female,NA,23,Czech,NA,high school,3,-1,1,-1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_5c2MnZDSWCriLkd,100,1938,female,NA,20,Czech,NA,high school,1,-2,-1,3,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_29iYtHr0s86Czw6,100,2044,female,NA,20,Czech,NA,high school,2,1,1,2,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_3CN7MuNs8e87ATw,100,2083,female,NA,20,Czech,NA,high school,2,-1,1,-1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_W83jKMl2dvJX2Wl,100,1994,female,NA,21,Czech,NA,high school,1,0,-1,-2,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_ZmzLyfiquxaLvDb,100,1139,female,NA,21,Czech,NA,high school,3,1,1,1,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_2zBaA8eJivqprws,100,1552,female,NA,22,Czech,NA,university,2,-1,0,-1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1FEWCBi70cHFbcm,100,3087,female,NA,24,Czech,NA,university,3,1,2,-3,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_2Eab3bLUYzOxh5e,100,5183,female,NA,25,Czech,NA,high school,3,0,2,2,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_2S39s0t2ZIqGI4J,100,1782,female,NA,26,Czech,NA,university,2,2,0,-1,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_UzOUjkMIKbkYvPH,100,1754,female,NA,22,Czech,NA,university,3,0,1,1,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_3EiokAQwGfDRQmv,100,2488,female,NA,21,Czech,NA,high school,2,-2,-1,1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_2zTFzo4yT3DT8zq,100,2882,female,NA,21,Czech,NA,high school,2,-2,1,1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_szNn4XDSB2sSFQR,100,1774,female,NA,26,Czech,NA,high school,2,-2,-1,-1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_8JtmPUOAb62tJn3,100,3172,female,NA,20,Czech,NA,high school,2,0,1,-3,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1NCuDhIhRB5m7BQ,100,1865,female,NA,22,Czech,NA,high school,2,-1,1,0,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_3fHlsLk5Zs6LndG,100,4508,female,NA,21,Czech,NA,high school,2,0,2,1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_27BTBOePwMsXV5o,100,1225,female,NA,21,Czech,NA,high school,1,0,3,0,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1Q6lx3NIuQZggUf,100,4192,female,NA,21,Czech,NA,high school,2,-2,2,1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_2BqvWEQQgZ1CsE1,100,1438,female,NA,20,Czech,NA,high school,1,-1,2,1,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_25tE5KcAgvCW0jn,100,3225,female,NA,21,Czech,NA,high school,3,-1,1,-1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_UnASAcG9mHWm8Zb,100,1740,female,NA,21,Czech,NA,high school,3,-1,-1,-1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1H2AtiH1mOXMYaB,100,2270,female,NA,26,Czech,NA,high school,2,-2,2,1,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_2VpSxMp6GW9EmOH,100,5767,female,NA,21,Czech,NA,high school,3,0,1,1,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1cYqi1P4onuL3Dx,100,1260,male,NA,20,Czech,NA,high school,-2,-3,1,1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_2ToPnhW2XdKIQzA,100,62478,female,NA,26,Czech,NA,university,3,0,1,1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1Ecax2aKB2UKLnQ,100,1985,female,NA,24,Czech,NA,university,1,-3,2,2,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_DbOHx7Qb64w6Med,100,1316,female,NA,21,Czech,NA,high school,3,0,3,3,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1drYefAyuTgy6ZI,100,5925,female,NA,19,Czech,NA,high school,3,-3,3,2,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_3hcjqW3z2IZKDPn,100,2665,female,NA,20,Czech,NA,high school,2,-1,0,1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_ZCdgVPnFPRR7U7T,100,1760,non-binary,NA,23,Czech,NA,university,1,-2,-2,-1,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1Olg0GZj2xSPj6X,100,2805,female,NA,22,Czech,NA,high school,2,0,1,1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_3fH0H9oDhpjsAVr,100,4038,female,NA,24,Czech,NA,university,2,1,1,2,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_2pMqpJb4UZn1qxG,100,16948,male,NA,21,Czech,NA,high school,-3,-2,3,-1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_3MuOnlJmjC9YDOh,100,2072,male,NA,21,Czech,NA,high school,-2,-2,0,2,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_BGuphtvJ0vs8Zmp,100,1553,female,NA,21,Czech,NA,high school,1,1,1,-2,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_3R48ewKrFBno9Hr,100,2396,female,NA,21,Czech,NA,high school,0,-1,3,1,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1losaF6Wff4VgMN,100,11972,female,NA,24,Czech,NA,university,3,-1,-2,2,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1HdHSDteCdRt9oJ,100,2027,male,NA,20,Czech,NA,high school,-1,-2,1,0,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_3NzdCWSEuJSUfGS,100,1534,non-binary,NA,21,Czech,NA,high school,0,-1,-1,3,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_2R2CLGYOhnkYWDt,100,1776,female,NA,21,Czech,NA,high school,1,-2,1,2,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_3nT0FrMe07SIlCj,100,1266,female,NA,23,Czech,NA,university,3,0,1,-3,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_26msNcq0szWhPUQ,100,5661,female,NA,20,Czech,NA,high school,3,-1,-1,1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1lxGdgboDhH8Hlz,100,2895,female,NA,22,Czech,NA,high school,0,-1,1,-1,mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1KkdzYh5i5C2XcL,100,1997,female,NA,22,Czech,NA,high school,0,-1,1,-1,not_mobile,PRIMUS_multipic_05,NA,NA,NA,NA,NA,cz_colour,university
+R_1meFkxWPDNQwKzx,100,2501,female,NA,23,Czech,NA,high school,2,-1,1,1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_3RgdSP772KORP5q,100,2086,female,NA,21,Czech,NA,high school,3,1,-1,-1,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_3PI6QaTo2yrlWtH,100,2362,female,NA,19,Czech,NA,high school,0,0,-2,-1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_1eIYdrb5j9Txjv2,100,1730,female,NA,20,Czech,NA,high school,3,0,2,0,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_2tKt8PvSEua4AxP,100,1041,female,NA,21,Czech,NA,high school,2,-2,1,1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_1FfYIIsDoULQIlS,100,1446,female,NA,24,Czech,NA,university,2,-1,1,0,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_s7sJygJ80qNkx7r,100,2452,female,NA,23,Czech,NA,high school,3,2,3,0,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_1FQIzItWqY7FGck,100,2215,female,NA,22,Czech,NA,high school,3,0,-1,-1,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_2pVrAFfczb64P3q,100,846,female,NA,20,Czech,NA,high school,1,-1,1,-1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_2tM7dOiOOXUthhS,100,1983,female,NA,20,Czech,NA,high school,2,0,1,3,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_2U5HvpHOUUccBz3,100,2995,female,NA,22,Czech,NA,high school,1,-2,1,-2,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_3qKjI10GmxZBvcd,100,1927,female,NA,21,Czech,NA,high school,1,-1,3,-3,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_3nru3Thhu5oGV91,100,10977,male,NA,20,Czech,NA,high school,-3,1,-2,0,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_2y1TetQWJuq9McX,100,17700,male,NA,23,Czech,NA,high school,-1,0,2,2,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_1LIHVZHLQwaMNMq,100,1696,female,NA,21,Czech,NA,high school,2,0,-1,1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_1P8jOvSFt6GisqN,100,24742,male,NA,21,Czech,NA,high school,-3,-1,3,1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_3ebiNDVvRjUO3SG,100,2356,female,NA,25,Czech,NA,university,3,0,1,3,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_1FJJKpe8TrY3zrO,100,44213,female,NA,28,Czech,NA,university,2,-2,1,2,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_2Sv2SmLqZ0wpvuN,100,2301,female,NA,20,Czech,NA,high school,2,0,-1,3,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_3L4OoOQbI91cOs3,100,1906,female,NA,27,Czech,NA,university,2,0,-1,-1,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_1E6uRNdMlT689Uk,100,5104,female,NA,20,Czech,NA,high school,2,-2,-1,1,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_2Ym6QqxFewySmqr,100,1975,female,NA,25,Czech,NA,university,3,2,1,0,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_30nQQ1RQn6RTZ4v,100,59639,female,NA,20,Czech,NA,high school,0,-2,0,1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_125psMfp4tBdwhZ,100,2697,male,NA,23,Czech,NA,high school,-3,2,1,1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_wRlwbvT33gzp6jD,100,1448,female,NA,22,Czech,NA,high school,3,0,-1,0,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_prTZiIqG2klKSUV,100,1369,female,NA,21,Czech,NA,high school,3,-2,0,1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_3hoLEqrkvnNiyc4,100,1543,female,NA,20,Czech,NA,high school,3,-1,1,2,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_31ZaIehyPdRfK3w,100,1918,female,NA,22,Czech,NA,high school,2,0,-1,1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_3ERwkyPdpNWJJiu,100,2112,female,NA,19,Czech,NA,university,2,-1,1,1,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_2qDA0jrpM5XCXZc,100,1517,female,NA,21,Czech,NA,high school,1,-2,-1,1,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_SOG81RA1vSEGnqF,100,3356,female,NA,20,Czech,NA,high school,2,-1,-2,-2,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_2YEsHl00nstVSoC,100,3687,female,NA,21,Czech,NA,high school,2,-1,-1,3,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_C9Ldo6Lls78XGPT,99,2831,female,NA,21,Czech,NA,high school,1,-2,0,2,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_1CpGjlFx5b0Hpec,100,1879,female,NA,23,Czech,NA,high school,0,-1,0,1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_pud6533Zf0GGkeZ,100,3926,female,NA,24,Czech,NA,university,1,2,-1,-1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_3IZgSxewqQrny0q,100,2649,male,NA,24,Czech,NA,high school,-1,-2,-3,2,mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_BQVHpc2KhTwHroZ,100,1958,female,NA,19,Czech,NA,high school,1,0,-1,-1,not_mobile,PRIMUS_multipic_gray01,NA,NA,NA,NA,NA,cz_gray,university
+R_3MJuPnRLP1kPFik,100,913,female,NA,22,Czech,NA,high school,3,0,2,0,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1Qyk33sy7BxJn6z,100,1167,female,NA,19,Czech,NA,high school,3,0,1,3,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1JCRMOb2jr2ieBp,100,1261,female,NA,20,Czech,NA,high school,2,0,2,0,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_w4WMGHSJVhFCrcJ,100,1661,female,NA,20,Czech,NA,high school,0,3,-1,-1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_O3u8URyobrd79CN,100,1426,female,NA,25,Czech,NA,high school,3,0,1,-1,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_80qoLRNmbtdXRrb,100,3083,male,NA,19,Czech,NA,high school,-1,-2,-2,3,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_2uq8E5ssRauEBw1,100,2592,female,NA,23,Czech,NA,high school,2,-1,2,-2,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_2xE3coihPJCNfhQ,100,2489,non-binary,NA,21,Czech,NA,high school,1,-3,-1,1,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_CfWDeHfYgpJDG1z,100,2811,female,NA,21,Czech,NA,high school,2,-1,1,-1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_2VwKdE28mE3IJtc,100,1651,female,NA,22,Czech,NA,university,2,-2,-2,1,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_2WOVnlsZefixNEV,100,2125,male,NA,22,Czech,NA,high school,-1,-1,0,1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1K3DKXaM8DqiycA,100,5253,female,NA,20,Czech,NA,high school,2,1,1,-2,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_8le3OljDzOVyEP7,100,9729,male,NA,20,Czech,NA,high school,-3,1,-2,-2,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1pycWocjhMUkqJM,100,6209,female,NA,22,Czech,NA,high school,2,1,-1,-1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_3qw0ehqEdVAtw2e,100,1919,male,NA,23,Czech,NA,university,-1,-1,-1,3,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_3oTH3kiOpW4QkaC,100,4379,male,NA,21,Czech,NA,high school,-3,-1,-1,3,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_UnEOxIoboPJI8o1,100,15860,male,NA,22,Czech,NA,high school,-2,-1,-2,1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1NDsE5HUQ6kuCum,100,2626,female,NA,23,Czech,NA,high school,2,0,-1,-1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1mxUpNx7GAb4xXU,100,10661,female,NA,21,Czech,NA,high school,2,-1,0,-1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1FP9AqNY3gOatYe,100,2961,female,NA,21,Czech,NA,high school,2,-1,-1,1,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_oXKHU75yvbPnytr,100,1997,female,NA,25,Czech,NA,university,1,-1,-1,1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_cXX5P36MlH7oICd,100,2548,female,NA,21,Czech,NA,high school,2,0,1,-3,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1PaTnJZTH07ejeK,100,11120,female,NA,22,Czech,NA,high school,3,1,-2,2,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_zcg4f8EeqYw9R3X,100,2670,female,NA,21,Czech,NA,high school,3,0,-1,-2,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_3HLI8GoizvxEBoQ,100,11594,female,NA,23,Czech,NA,high school,3,-2,2,2,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1mxRRjEjQ2EQkj4,100,1539,female,NA,21,Czech,NA,high school,2,-2,1,-1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_2SfvOPB8Lkr3Etc,100,3267,female,NA,21,Czech,NA,high school,2,-2,-2,-3,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_29p5LuA4LhYRaeB,100,1438,female,NA,20,Czech,NA,high school,2,-2,-1,2,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_3iLjiCDYVyaOC4Q,100,2134,male,NA,21,Czech,NA,high school,-1,1,1,2,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_2azqGD69PNoyH8b,100,2174,female,NA,22,Czech,NA,high school,2,-1,1,1,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1LU1QViD5UN43eE,100,2725,female,NA,20,Czech,NA,high school,1,-2,1,-1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_3HBUCs7Ajb5AXyc,100,1933,female,NA,24,Czech,NA,university,3,-2,-1,1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_sTr80x23so2a6JP,100,431293,female,NA,23,Czech,NA,university,2,3,1,0,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_SV0RLJX9sZnF7m9,100,3982,male,NA,22,Czech,NA,high school,-2,2,-1,-1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_3P4yP7HbR5hp1sc,100,2543,female,NA,23,Czech,NA,university,3,0,-2,1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_2YA2Y5ELT9xYfQZ,100,1847,female,NA,24,Czech,NA,high school,3,-2,1,-1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1DzPeMyZQxebuJa,100,1861,female,NA,25,Czech,NA,university,1,-1,2,0,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_0xpEouNcJ6Qo4Tv,99,2485,female,NA,24,Czech,NA,university,2,-1,1,0,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_1Qbgnwb6gT3Rpyx,100,1542,female,NA,22,Czech,NA,high school,2,1,-1,1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_3ncS4BfMcsnPLDk,100,2888,female,NA,21,Czech,NA,high school,2,0,2,0,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_2VmtzZhQeU7IcFu,100,1133,female,NA,22,Czech,NA,university,3,0,0,-1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_25WT8jEL5FOJK46,100,1465,female,NA,25,Czech,NA,high school,2,0,1,1,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_3KIRguixE6sv5NV,100,3712,female,NA,21,Czech,NA,high school,3,-1,1,1,mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_30bBHGx1pkiOXiv,100,2749,male,NA,25,Czech,NA,university,-3,2,2,3,not_mobile,PRIMUS_multipic_gray02,NA,NA,NA,NA,NA,cz_gray,university
+R_4JejRvKjvdAKVpv,100,1587,female,NA,19,Czech,NA,high school,3,-2,1,3,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_RfMTWAKKgvIuYDL,100,1461,male,NA,22,Czech,NA,high school,-2,-1,-1,2,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_DOUvBAdUudi6u53,100,3716,female,NA,21,Czech,NA,high school,2,-2,-1,2,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_2Xc9KSBQYi0TFRN,100,3789,female,NA,20,Czech,NA,high school,1,-1,-1,0,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_2VHZzKNxD4Lwdcp,100,1930,female,NA,23,Czech,NA,high school,2,-1,-1,2,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_3oB11vkStqqlFyl,100,2442,male,NA,22,Czech,NA,high school,-2,-1,0,1,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_2E9NuRSSScyF6Ab,100,1861,female,NA,20,Czech,NA,high school,1,-1,1,-1,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1Nldrg5mVaSE3KO,100,8483,female,NA,29,Czech,NA,university,3,0,1,-2,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_0cTBbTOVolHsLcJ,100,1658,female,NA,19,Czech,NA,high school,3,-1,2,3,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_27UoIDdDfduqd8O,100,1280,female,NA,24,Czech,NA,university,1,-3,2,1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_6tAwWW4jsXTUPN7,100,2546,male,NA,24,Czech,NA,high school,-2,-2,2,3,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1DTN5VTpBfDlrC8,100,2337,female,NA,21,Czech,NA,high school,2,-2,1,0,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_2CEqIk4z7Qy8Khk,100,1603,female,NA,20,Czech,NA,high school,2,0,1,3,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_sp7uagwNIFCajYZ,100,1854,female,NA,22,Czech,NA,university,2,-1,1,1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1gwIjjgA69anJiG,100,13037,female,NA,21,Czech,NA,high school,3,0,-1,1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1l46rrcXmmpmOmc,100,2182,female,NA,22,Czech,NA,high school,2,-1,1,1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1jwvFfhpNfFrMwv,100,2060,female,NA,21,Czech,NA,high school,1,-2,-1,0,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_BJ174FIm8TMNpLz,100,4794,female,NA,20,Czech,NA,high school,2,-1,0,1,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_UgonUMd8zSYlBQZ,100,1795,female,NA,21,Czech,NA,high school,3,0,0,1,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_3JjUasDKJXvX7WU,100,1327,female,NA,21,Czech,NA,high school,2,-1,1,1,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_tXt2c7JjG4WyfOp,100,2913,female,NA,19,Czech,NA,high school,3,0,1,3,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_Clglcbk1pLbcel3,100,3282,female,NA,25,Czech,NA,university,1,-1,2,1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_3HYBjfsJArxssnD,100,2467,female,NA,20,Czech,NA,high school,1,-1,2,1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1d9OKWqsI25uh8K,100,2094,female,NA,19,Czech,NA,high school,3,0,1,1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_b3JzDsrE64j3SiR,100,2218,female,NA,20,Czech,NA,high school,2,-1,-1,-1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1MR34ZTyUutO6Hs,100,3429,female,NA,24,Czech,NA,high school,1,-1,-1,1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_10YQu3y2fvbea1c,100,1649,female,NA,21,Czech,NA,high school,3,-2,1,2,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_2TuUQ9J96MGSEIw,100,3723,female,NA,19,Czech,NA,high school,1,0,0,1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_2SHwSM0kieP44nN,100,5483,male,NA,20,Czech,NA,high school,-1,-2,-1,2,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1ozEdWvLlihduQF,100,288616,female,NA,20,Czech,NA,high school,2,-1,0,2,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_2PzLIG3ELZFH8lt,100,29646,female,NA,20,Czech,NA,high school,2,1,1,-2,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_3NOGoQB7KhQJWRZ,100,1339,female,NA,24,Czech,NA,university,2,0,1,0,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1kIy0mue4eFDsQ3,100,10531,female,NA,22,Czech,NA,high school,3,0,2,-1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_3GAFinxFg01oJDo,100,2124,male,NA,20,Czech,NA,high school,-1,-2,1,3,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1gvIPWa7XXZZ49o,100,2527,female,NA,24,Czech,NA,high school,3,0,-1,0,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_psDIhIQlXanecdH,100,2358,female,NA,22,Czech,NA,high school,3,0,1,0,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_3EWki1LhTWCB5Dm,100,1422,male,NA,20,Czech,NA,high school,-3,0,-1,0,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1FQYyVtYy0h7ckp,100,2886,female,NA,21,Czech,NA,high school,2,-1,1,1,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_3k6Zvcw17dgF119,100,11927,female,NA,19,Czech,NA,high school,3,-1,0,1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_3smqMEFvC5tD7RZ,100,1958,male,NA,19,Czech,NA,high school,-2,1,1,1,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_1C3il2IeDulNUMx,100,3265,male,NA,20,Czech,NA,high school,-2,-2,1,2,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_3Hi9tjhY0FeRiTP,100,1232,female,NA,21,Czech,NA,high school,1,1,0,-3,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_2Ucpse8DCWfBj8o,100,1233,female,NA,23,Czech,NA,high school,2,0,1,-1,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_3RqfjLJA017dmDy,100,2353,male,NA,20,Czech,NA,high school,-1,-3,1,-3,not_mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_32QKmDiCQZv3NDs,100,4502,female,NA,24,Czech,NA,university,3,0,1,-1,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_2cuzUUrtsSmTUfs,100,1484,female,NA,20,Czech,NA,high school,3,1,2,0,mobile,PRIMUS_multipic_gray03,NA,NA,NA,NA,NA,cz_gray,university
+R_3PZRKhquaoLMM7n,100,1480,female,NA,20,Czech,NA,high school,1,0,2,-1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_3HqzqRaAW7ER8Ft,100,2177,female,NA,22,Czech,NA,high school,2,-1,1,0,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_210nVbDDWpSsGvW,100,1962,female,NA,21,Czech,NA,high school,3,0,3,-2,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_RfQd6AzME1AJOVP,100,2314,female,NA,24,Czech,NA,university,2,-2,1,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2UhZDi4ZkYEMv6u,100,1516,female,NA,20,Czech,NA,high school,2,-1,2,-1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_22AnPvIjqZzsI5S,100,1366,female,NA,19,Czech,NA,high school,3,-1,0,2,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_3IYm4rXJZId6oao,100,9112,female,NA,26,Czech,NA,high school,3,-2,-1,1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_1nVKh2yRwsUFRC8,100,2463,female,NA,20,Czech,NA,high school,2,0,-1,2,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2S6KtHkwMUkowBE,100,2527,female,NA,22,Czech,NA,high school,3,0,-1,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_1GZDIas5rXRIo0w,100,1358,female,NA,20,Czech,NA,high school,3,-1,-1,-1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2zC7YY7DnjMDFTK,100,5537,male,NA,21,Czech,NA,high school,-2,-3,0,2,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_1FD3fB95DbuYlQg,100,1261,female,NA,22,Czech,NA,high school,2,0,2,1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_3MRNzFXFE9l63k5,100,3557,female,NA,19,Czech,NA,high school,1,-2,1,-1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_22s5OFGwfgP4vW0,100,1352,female,NA,22,Czech,NA,high school,2,-2,1,3,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_0unbBaj7YRGb21j,100,1892,female,NA,25,Czech,NA,high school,1,-2,-3,-1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_22nXzbyz5MNZ4TD,100,2998,female,NA,20,Czech,NA,high school,2,-1,-1,2,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_1KdIw8ZRFlMMJ2B,100,1824,male,NA,26,Czech,NA,university,-1,-3,-1,3,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_3R2ddi3IxhvNcwi,100,1779,non-binary,NA,22,Czech,NA,high school,1,-2,1,1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_1PcSfLphdpx0nXz,100,729,male,NA,21,Czech,NA,high school,-3,0,2,-1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_9LENGnOYgbCAt0J,100,2470,female,NA,21,Czech,NA,high school,2,-1,1,2,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2QAOxwDOjVnUfl1,100,1505,female,NA,23,Czech,NA,high school,1,-2,-1,2,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2YEufleIbx6jqV5,100,2463,female,NA,20,Czech,NA,high school,1,0,-3,-1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_6KnjMpjMu9JHTnX,100,2183,female,NA,21,Czech,NA,high school,3,-1,-1,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_b3mztUt6OceJxXX,100,1569,female,NA,22,Czech,NA,high school,3,0,1,1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_bat5Sgg1kPjoFdD,100,1998,male,NA,21,Czech,NA,high school,-3,0,2,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_pF8NFW87e4RwFgJ,100,2011,female,NA,20,Czech,NA,high school,1,1,2,1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2qE2rqrOKn7faZk,100,2431,female,NA,19,Czech,NA,high school,1,-3,0,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_3MS6qJnYA4ZdlTt,100,1863,female,NA,23,Czech,NA,high school,2,0,-1,1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_b96lxn9v990JYXf,100,1827,female,NA,21,Czech,NA,high school,1,-1,2,-1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2c6qcPSsLpvSadX,100,4438,male,NA,22,Czech,NA,high school,-3,0,0,-1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2tNbOpz4ogi9gqt,100,1109,female,NA,23,Czech,NA,high school,2,1,2,-1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_1MKYZCzKRil573w,100,1478,male,NA,21,Czech,NA,high school,-2,0,-1,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_1go6LHifvVOxAHL,100,2386,female,NA,22,Czech,NA,high school,3,-1,1,2,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_3LgcddzCepIIbPX,100,2465,female,NA,21,Czech,NA,high school,2,-3,-1,0,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_21cW6jBa7uzGCcp,100,4963,female,NA,21,Czech,NA,high school,2,-1,1,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2QFG8blSm1pYnWy,100,4267,female,NA,20,Czech,NA,high school,3,-3,1,3,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_1OUYzLzmRqPiUhC,100,3715,female,NA,20,Czech,NA,high school,1,-1,0,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_ZIWfRUz3Ka2jUhX,100,5842,female,NA,26,Czech,NA,high school,2,-1,1,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_895FG3Q4l5sUuqt,100,1557,female,NA,21,Czech,NA,high school,2,-1,2,0,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_1mXzjMKAlJOHW40,100,425893,female,NA,22,Czech,NA,high school,2,0,2,0,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_1jB9VXB39lnYREk,100,3069,female,NA,20,Czech,NA,high school,1,-1,1,-1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_31NlokbRgq6Ma8w,100,2296,female,NA,19,Czech,NA,high school,2,0,-1,-1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_UXZLuuzblunl2jn,100,2211,female,NA,21,Czech,NA,high school,3,0,-1,1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_zTPJjyc1F3r4cGR,100,559883,female,NA,22,Czech,NA,high school,3,0,1,-1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2vigHUE4gQ0j8UI,100,3932,female,NA,25,Czech,NA,university,2,-2,-1,2,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_117RkXPyXGgqtIp,100,3877,female,NA,22,Czech,NA,university,2,0,2,-1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_12QZE6aS3re2RGN,100,111056,male,NA,22,Czech,NA,high school,-3,-1,2,0,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_3ERyxflQS5erMga,100,7421,female,NA,23,Czech,NA,university,1,-1,2,0,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_273dFPQ3iDUUNth,100,1129,female,NA,23,Czech,NA,university,3,0,1,1,mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2feofbyUXiwqo7z,100,2184,female,NA,20,Czech,NA,high school,3,0,-1,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_pFTZzp9orVkwGNr,100,4504,female,NA,20,Czech,NA,high school,3,-1,2,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_2TSNROBAPu76ad4,100,1949,female,NA,21,Czech,NA,high school,3,-2,0,1,not_mobile,PRIMUS_multipic_gray04,NA,NA,NA,NA,NA,cz_gray,university
+R_1nOTRwGEGedSkev,100,1842,female,NA,23,Czech,NA,university,2,-1,0,1,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2xxyMzL84S6xudq,100,774,female,NA,21,Czech,NA,high school,3,0,1,-1,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2X4LYEFBJl9TcEB,100,3314,female,NA,22,Czech,NA,high school,2,-1,2,-1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2SctJcQhmJIi0fu,100,2141,male,NA,21,Czech,NA,high school,-3,0,-1,2,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2wpldwcaO0IRUlS,100,1467,female,NA,29,Czech,NA,university,1,0,1,-1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_OPhVgIlrlLr5Xhf,100,979,male,NA,21,Czech,NA,high school,-1,0,2,3,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2dLWOm1S2qkE4iE,100,2847,female,NA,25,Czech,NA,high school,3,0,2,1,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_27PP78PAl5X2UMR,100,5083,female,NA,20,Czech,NA,high school,2,-1,1,3,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_3DpxaEX5fYAlj5r,100,2737,female,NA,25,Czech,NA,university,2,-2,-1,1,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_xFd7l2aHnpt3KRr,100,2415,male,NA,19,Czech,NA,high school,-2,2,1,1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_OEaCm5vdZmdCDu1,100,2039,male,NA,19,Czech,NA,high school,-3,2,3,-3,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2YLXYLFywE9G5Fe,100,1425,female,NA,19,Czech,NA,high school,0,0,-1,0,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2EsInZieXVEn52T,100,1595,female,NA,21,Czech,NA,high school,1,1,0,-1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_r8yW3t8HlbA3I5j,100,1234,female,NA,20,Czech,NA,high school,2,-1,1,0,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2Clatn1fLoG35R1,100,2107,male,NA,20,Czech,NA,high school,-2,-1,1,1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2YgO2P0OKnmou5V,100,1747,female,NA,21,Czech,NA,high school,3,0,-1,-1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_UJCqoQhND941Oql,100,19684,female,NA,19,Czech,NA,high school,2,0,3,1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_b9rLaJZVY5NwsWl,100,3261,male,NA,20,Czech,NA,high school,-1,-1,2,1,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_12stsxCnAN2OsgV,100,3341,female,NA,20,Czech,NA,high school,2,-1,-1,-1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2aFhMr90UWlK9AT,100,1828,female,NA,23,Czech,NA,university,1,-1,1,1,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_r6YGUYPMnfC1NTP,100,2244,male,NA,19,Czech,NA,high school,-2,-1,1,1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_Rw6r4gfsxsJIiNH,100,1997,female,NA,21,Czech,NA,high school,3,0,2,1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_25zouBjqlbmhSUU,100,4062,female,NA,20,Czech,NA,high school,1,-3,0,-1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_yz2Vetmd2gIlN2F,100,10639,female,NA,24,Czech,NA,university,2,0,2,2,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_Ahdg69THflcOXUR,100,3467,male,NA,21,Czech,NA,high school,-1,1,-1,1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_RxJ85EvDUHUuVRn,100,8720,female,NA,22,Czech,NA,high school,1,0,-1,0,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_3EzrL4UBOhuQmd5,100,25782,female,NA,24,Czech,NA,university,2,-3,1,1,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_1kYwG1w5Wzoa7P2,100,2392,female,NA,20,Czech,NA,high school,3,0,-2,-2,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_7P7bniAufwtWrm1,100,2820,female,NA,22,Czech,NA,high school,2,0,1,-2,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2WYhcwoJHNSM7lT,100,4824,female,NA,20,Czech,NA,high school,2,1,0,-1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2xzwx7voehytuVM,100,2265,female,NA,23,Czech,NA,university,3,-2,2,2,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_6xRDr2uvFjS49QB,100,2330,female,NA,21,Czech,NA,high school,2,1,1,2,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_W0NML96o1Klf0BP,100,2451,male,NA,21,Czech,NA,high school,-2,-1,-1,1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_1NmpCMv4063dUL6,100,34144,female,NA,22,Czech,NA,high school,2,-1,0,1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_3kvRSspTLQnh2pL,100,2992,female,NA,22,Czech,NA,high school,3,-1,0,1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_3Rr2mNPcZsThX3z,100,2489,female,NA,20,Czech,NA,high school,2,-1,-1,3,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_24vXqLbW5cgTk00,100,2060,female,NA,21,Czech,NA,high school,3,2,1,1,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_1l3q78hPR7GkgXM,100,1274,female,NA,20,Czech,NA,high school,2,0,1,1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_DAD7BuDo8XQbfYR,100,3722,female,NA,22,Czech,NA,high school,2,1,1,-1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2ROgcHU2hmuFw42,100,1780,female,NA,20,Czech,NA,high school,0,0,-2,2,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_V2wMYTHws7iKohP,100,2326,female,NA,28,Czech,NA,university,2,2,1,-2,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_1pne3eLbCyIkdcP,100,3068,female,NA,25,Czech,NA,university,2,0,-2,2,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_qxNXm2Bx77WiXBL,100,1825,male,NA,19,Czech,NA,high school,-2,2,2,-1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2aCteu1QmHZm42g,100,1771,female,NA,22,Czech,NA,university,2,-1,2,0,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2qmyBwL8tf3nlGh,100,2844,male,NA,22,Czech,NA,high school,-2,1,-1,-1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_1f2gmE0oK71LdTe,100,2750,female,NA,21,Czech,NA,high school,2,-1,1,0,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_27ffTt5UhPtShAi,100,1630,non-binary,NA,21,Czech,NA,high school,0,-2,0,1,not_mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_1pM48xAFbitxnoG,100,1513,female,NA,23,Czech,NA,high school,3,0,1,0,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university
+R_2ZHr5qcFR27B6zE,100,1530,female,NA,22,Czech,NA,university,2,-3,2,1,mobile,PRIMUS_multipic_gray05,NA,NA,NA,NA,NA,cz_gray,university

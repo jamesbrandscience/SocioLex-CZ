@@ -1,0 +1,514 @@
+---
+title: "SocioLex-CZ Norms: Pre-processing"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: cosmo
+    toc: true
+    toc_float: true
+    collapsed: false
+    df_print: paged
+    code_folding: show
+---
+
+<style>
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #95A044;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Libraries
+
+```{r}
+library(tidyverse)
+
+```
+
+# Raw data
+
+The data we will use comes from 5 different versions of the same rating experiment.
+
+We will process each different version separately, so we have data for the demographic information and the actual ratings for the items.
+
+The demographic and rating data will be stored in two separate objects for each version.
+
+The code below processes the raw data for each version
+
+## Sociolex words
+
+This is the core SocioLex data, the original 2,700 words were rated in this set of the data, by the LABELS participant pool.
+
+```{r message=FALSE}
+filenames <- list.files("PRIMUS_student_data/data/")
+
+sociolex_data <- tibble()
+sociolex_demographic <- tibble()
+
+for (i in filenames) {
+  
+  student_data2 <- read_csv(paste0("PRIMUS_student_data/data/", i), skip = 1) %>%
+    dplyr::slice(-1) %>%
+    rename(participant_feedback = which(str_starts(colnames(.), "To je ")))
+
+  student_data1a <- student_data2 %>%
+    select(-`gender - náhrdelník`:-participant_feedback) %>%
+    select(-starts_with("Timing")) %>%
+    rename(participant_email_address = 18,
+           participant_gender_category = 24,
+           participant_gender_category_other = 25,
+           participant_gender_scale = 26,
+           participant_age = 28,
+           participant_language = 29,
+           participant_language_other = 30,
+           participant_education = 31,
+           participant_political_scale = 32,
+           participant_optimism_scale = 33,
+           participant_location_scale = 34,
+           duration = 6,
+           Response_ID = 9,
+           participant_start_time = 1) %>%
+    mutate(survey_version = i) %>%
+    left_join(student_data2 %>%
+                rename(Response_ID = 9) %>%
+                select(Response_ID, participant_feedback)) %>%
+    left_join(student_data2 %>%
+                rename(Response_ID = `Response ID`) %>%
+                select(Response_ID, `gender - náhrdelník`:participant_feedback) %>%
+                select(Response_ID, starts_with("Timing")) %>%
+                rename(timing_gender = `Timing - Page Submit...154`,
+                       timing_valence = `Timing - Page Submit...263`,
+                       timing_political = `Timing - Page Submit...372`,
+                       timing_location = `Timing - Page Submit...481`,
+                       timing_age = `Timing - Page Submit...590`) %>%
+                pivot_longer(-Response_ID) %>%
+                filter(str_detect(name, "timing_")) %>%
+                mutate(value = as.numeric(as.character(value))) %>%
+                pivot_wider(names_from = name, values_from = value))
+  
+  student_data1 <- student_data2 %>%
+    rename(Response_ID = `Response ID`) %>%
+    select(Response_ID, `gender - náhrdelník`:participant_feedback) %>%
+    select(-starts_with("Timing"), -participant_feedback) %>%
+    pivot_longer(-Response_ID)
+
+  sociolex_data <<- bind_rows(sociolex_data, student_data1)
+  sociolex_demographic <<- bind_rows(sociolex_demographic, student_data1a)
+  
+}
+
+rm(student_data1, student_data1a, student_data2)
+
+```
+
+## Prolific words
+
+This was supplementary data collected on Prolific, to increase the number of male participants. It is based on the 2,700 words.
+
+```{r message=FALSE}
+filenames <- list.files("PRIMUS_prolific_data/data/")
+
+prolific_data <- tibble()
+prolific_demographic <- tibble()
+
+for (i in filenames) {
+  
+  student_data2 <- read_csv(paste0("PRIMUS_prolific_data/data/", i), skip = 1) %>%
+    dplyr::slice(-1) %>%
+    rename(participant_feedback = which(str_starts(colnames(.), "To je ")))
+
+  student_data1a <- student_data2 %>%
+    select(-`gender - náhrdelník`:-participant_feedback) %>%
+    select(-starts_with("Timing")) %>%
+    rename(participant_email_address = 18,
+           participant_gender_category = 24,
+           participant_gender_category_other = 25,
+           participant_gender_scale = 26,
+           participant_age = 28,
+           participant_language = 29,
+           participant_language_other = 30,
+           participant_education = 31,
+           participant_political_scale = 32,
+           participant_optimism_scale = 33,
+           participant_location_scale = 34,
+           duration = 6,
+           Response_ID = 9,
+           participant_start_time = 1) %>%
+    mutate(survey_version = i) %>%
+    left_join(student_data2 %>%
+                rename(Response_ID = 9) %>%
+                select(Response_ID, participant_feedback)) %>%
+    left_join(student_data2 %>%
+                rename(Response_ID = `Response ID`) %>%
+                select(Response_ID, `gender - náhrdelník`:participant_feedback) %>%
+                select(Response_ID, starts_with("Timing")) %>%
+                rename(timing_gender = `Timing - Page Submit...154`,
+                       timing_valence = `Timing - Page Submit...263`,
+                       timing_political = `Timing - Page Submit...372`,
+                       timing_location = `Timing - Page Submit...481`,
+                       timing_age = `Timing - Page Submit...590`) %>%
+                pivot_longer(-Response_ID) %>%
+                filter(str_detect(name, "timing_")) %>%
+                mutate(value = as.numeric(as.character(value))) %>%
+                pivot_wider(names_from = name, values_from = value))
+  
+  student_data1 <- student_data2 %>%
+    rename(Response_ID = `Response ID`) %>%
+    select(Response_ID, `gender - náhrdelník`:participant_feedback) %>%
+    select(-starts_with("Timing"), -participant_feedback) %>%
+    pivot_longer(-Response_ID)
+
+  prolific_data <<- bind_rows(prolific_data, student_data1)
+  prolific_demographic <<- bind_rows(prolific_demographic, student_data1a)
+  
+}
+
+rm(student_data1, student_data1a, student_data2)
+
+```
+
+## CZ words MultiPic
+
+This is additional data that uses the words corresponding to the images from MultiPic. There are words that are in the SocioLex word list, but also words that are not. The data was collected from the LABELS participant pool.
+
+```{r message=FALSE}
+filenames <- list.files("multipic_words_data/")
+
+multipic_data_words_cz <- tibble()
+multipic_demographic_words_cz <- tibble()
+
+for (i in filenames) {
+  
+  multipic_data2 <- read_csv(paste0("multipic_words_data/", i), skip = 1) %>%
+    dplyr::slice(-1) %>%
+    rename(participant_feedback = which(str_starts(colnames(.), "To je ")))
+
+  multipic_data1a <- multipic_data2 %>%
+    select(-`gender - náhrdelník`:-participant_feedback) %>%
+    select(-starts_with("Timing")) %>%
+    rename(participant_email_address = 18,
+           participant_gender_category = 24,
+           participant_gender_category_other = 25,
+           participant_gender_scale = 26,
+           participant_age = 28,
+           participant_language = 29,
+           participant_language_other = 30,
+           participant_education = 31,
+           participant_political_scale = 32,
+           participant_optimism_scale = 33,
+           participant_location_scale = 34,
+           duration = 6,
+           Response_ID = 9,
+           participant_start_time = 1) %>%
+    mutate(survey_version = i) %>%
+    left_join(multipic_data2 %>%
+                rename(Response_ID = 9) %>%
+                select(Response_ID, participant_feedback)) %>%
+    left_join(multipic_data2 %>%
+                rename(Response_ID = `Response ID`) %>%
+                select(Response_ID, `gender - náhrdelník`:participant_feedback) %>%
+                select(Response_ID, starts_with("Timing - Page Submit")) %>%
+                rename(timing_gender = 2,
+                       timing_valence = 3,
+                       timing_political = 4,
+                       timing_location = 5,
+                       timing_age = 6) %>%
+                pivot_longer(-Response_ID) %>%
+                filter(str_detect(name, "timing_")) %>%
+                mutate(value = as.numeric(as.character(value))) %>%
+                pivot_wider(names_from = name, values_from = value))
+  
+  multipic_data1 <- multipic_data2 %>%
+    rename(Response_ID = `Response ID`) %>%
+    select(Response_ID, `gender - náhrdelník`:participant_feedback) %>%
+    select(-starts_with("Timing"), -participant_feedback) %>%
+    pivot_longer(-Response_ID)
+  
+  multipic_data_words_cz <<- bind_rows(multipic_data_words_cz, multipic_data1)
+  multipic_demographic_words_cz <<- bind_rows(multipic_demographic_words_cz, multipic_data1a)
+
+}
+
+rm(multipic_data1, multipic_data1a, multipic_data2)
+
+```
+
+## CZ colour MultiPic
+
+This is the data from the images in MultiPic, instead of words the participants rated the images. There is no age dimension. The images here are in colour.
+
+```{r message=FALSE}
+filenames <- list.files("multipic_colour_data/")
+
+multipic_data_colour_cz <- tibble()
+multipic_demographic_colour_cz <- tibble()
+
+for (i in filenames) {
+  
+  multipic_data2 <- read_csv(paste0("multipic_colour_data/", i), skip = 1) %>%
+    dplyr::slice(-1) %>%
+    rename(participant_feedback = which(str_starts(colnames(.), "To je ")))
+  
+  multipic_data1a <- multipic_data2 %>%
+    select(-`PICTURE_MOUSE - velmi městské:velmi venkovské`:-participant_feedback) %>%
+    select(-starts_with("Timing")) %>%
+    rename(participant_email_address = 18,
+           participant_gender_category = 24,
+           participant_gender_category_other = 25,
+           participant_gender_scale = 26,
+           participant_age = 27,
+           participant_language = 28,
+           participant_language_other = 29,
+           participant_education = 30,
+           participant_political_scale = 31,
+           participant_optimism_scale = 32,
+           participant_location_scale = 33,
+           duration = 6,
+           Response_ID = 9,
+           participant_start_time = 1) %>%
+    mutate(survey_version = i) %>%
+    left_join(multipic_data2 %>%
+                rename(Response_ID = 9) %>%
+                select(Response_ID, participant_feedback))
+  
+  multipic_data1 <- multipic_data2 %>%
+    rename(Response_ID = `Response ID`) %>%
+    select(Response_ID, `PICTURE_MOUSE - velmi městské:velmi venkovské`:participant_feedback) %>%
+    select(-starts_with("Timing"), -participant_feedback) %>%
+    pivot_longer(-Response_ID)
+  
+  multipic_data_colour_cz <<- bind_rows(multipic_data_colour_cz, multipic_data1)
+  multipic_demographic_colour_cz <<- bind_rows(multipic_demographic_colour_cz, multipic_data1a)
+  
+}
+
+rm(multipic_data1, multipic_data1a, multipic_data2)
+
+```
+
+## CZ gray MultiPic
+
+These are the same MultiPic images, but in gray-scale.
+
+```{r message=FALSE}
+filenames <- list.files("multipic_gray_data/")
+
+multipic_data_gray_cz <- tibble()
+multipic_demographic_gray_cz <- tibble()
+
+for (i in filenames) {
+  
+  multipic_data2 <- read_csv(paste0("multipic_gray_data/", i), skip = 1) %>%
+    dplyr::slice(-1) %>%
+    rename(participant_feedback = which(str_starts(colnames(.), "To je ")))
+  
+  multipic_data1a <- multipic_data2 %>%
+    select(-`PICTURE_MOUSE_GRAY - velmi městské:velmi venkovské`:-participant_feedback) %>%
+    select(-starts_with("Timing")) %>%
+    rename(participant_email_address = 18,
+           participant_gender_category = 24,
+           participant_gender_category_other = 25,
+           participant_gender_scale = 26,
+           participant_age = 27,
+           participant_language = 28,
+           participant_language_other = 29,
+           participant_education = 30,
+           participant_political_scale = 31,
+           participant_optimism_scale = 32,
+           participant_location_scale = 33,
+           duration = 6,
+           Response_ID = 9,
+           participant_start_time = 1) %>%
+    mutate(survey_version = i) %>%
+    left_join(multipic_data2 %>%
+                rename(Response_ID = 9) %>%
+                select(Response_ID, participant_feedback))
+  
+  multipic_data1 <- multipic_data2 %>%
+    rename(Response_ID = `Response ID`) %>%
+    select(Response_ID, `PICTURE_MOUSE_GRAY - velmi městské:velmi venkovské`:participant_feedback) %>%
+    select(-starts_with("Timing"), -participant_feedback) %>%
+    pivot_longer(-Response_ID)
+  
+  multipic_data_gray_cz <<- bind_rows(multipic_data_gray_cz, multipic_data1)
+  multipic_demographic_gray_cz <<- bind_rows(multipic_demographic_gray_cz, multipic_data1a)
+  
+}
+
+rm(multipic_data1, multipic_data1a, multipic_data2)
+
+```
+
+# Demographics
+
+This section will clean up the demographic information. Participant email addresses and feedback will be removed and we will have a clean demographic data to use for additional analyses.
+
+`sociolex_demographics_all` will be the object that stores the data on all participants.
+
+```{r}
+demographic_variables <- c("Response_ID",
+                           "Progress",
+                           "duration",
+                           "participant_email_address",
+                           "participant_gender_category",
+                           "participant_gender_category_other",
+                           "participant_age",
+                           "participant_language",
+                           "participant_language_other",
+                           "participant_education",
+                           "participant_gender_scale",
+                           "participant_political_scale",
+                           "participant_optimism_scale",
+                           "participant_location_scale",
+                           "Device",
+                           "survey_version")
+
+sociolex_demographics_all <- multipic_demographic_words_cz %>%
+  select(all_of(demographic_variables), starts_with("timing")) %>%
+  mutate(version = "cz_words") %>%
+  bind_rows(multipic_demographic_colour_cz %>%
+              select(all_of(demographic_variables)) %>%
+              mutate(version = "cz_colour")) %>%
+  bind_rows(multipic_demographic_gray_cz %>%
+              select(all_of(demographic_variables)) %>%
+              mutate(version = "cz_gray")) %>%
+  bind_rows(sociolex_demographic %>%
+              select(all_of(demographic_variables), starts_with("timing")) %>%
+              mutate(version = "cz_words_sociolex")) %>%
+  bind_rows(prolific_demographic %>%
+              select(all_of(demographic_variables), starts_with("timing")) %>%
+              mutate(version = "cz_words_sociolex")) %>%
+  as_tibble() %>%
+  mutate(Progress = as.numeric(Progress),
+         participant_age = as.numeric(as.character(`participant_age`)),
+         survey_version = str_remove(survey_version, "_Nov.*|_Dec.*|_Jan.*"),
+         participant_language = ifelse(is.na(participant_language_other), participant_language,
+                                       ifelse(str_detect(tolower(participant_language_other), ",|and"), "jiné (prosím upřesněte níže)",
+                                          ifelse(str_detect(tolower(participant_language_other), "če|cz"), "Czech", participant_language))),
+participant_language = ifelse(version == "czeng_colour" & participant_language == "English", "Other", participant_language)) %>%
+  mutate(participant_gender_category = ifelse(participant_gender_category == "muž", "male",
+                                              ifelse(participant_gender_category == "žena", "female",
+                                                     ifelse(participant_gender_category == "nebinární", "non-binary",
+                                                  ifelse(str_detect(participant_gender_category, "jiné|Please"), "self-report", participant_gender_category)))),
+         participant_gender_category = ifelse(str_detect(version, "eng_colour|eng_gray")&participant_gender_category == "male", "female",
+                                              ifelse(str_detect(version, "eng_colour|eng_gray")&participant_gender_category == "female", "male", participant_gender_category)),
+         participant_language = ifelse(participant_language == "čeština", "Czech", participant_language),
+         participant_education = ifelse(str_detect(participant_education, "střední"), "high school",
+                                        ifelse(str_detect(participant_education, "vysoká"), "university",  participant_education)),
+         participant_gender_scale = ifelse(str_detect(participant_gender_scale, "neutrální|neutralní"), 0,
+                                              ifelse(str_detect(participant_gender_scale, "žena 3"), 3,
+                                                     ifelse(str_detect(participant_gender_scale, "žena 2"), 2,
+                                                            ifelse(str_detect(participant_gender_scale, "žena 1"), 1,
+                                                                   ifelse(str_detect(participant_gender_scale, "muž 1"), -1,
+                                                                          ifelse(str_detect(participant_gender_scale, "muž 2"), -2,
+                                                                                 ifelse(str_detect(participant_gender_scale, "muž 3"), -3, participant_gender_scale))))))),
+         participant_gender_scale = as.numeric(participant_gender_scale),
+         # participant_gender_scale = ifelse(str_detect(version, "eng_words"), participant_gender_scale*-1, participant_gender_scale),
+         participant_political_scale = ifelse(str_detect(participant_political_scale, "neutrální|neutral"), 0,
+                                              ifelse(str_detect(participant_political_scale, "velmi konzervativní|very conservative"), 3,
+                                                     ifelse(str_detect(participant_political_scale, "spíše konzervativní|slightly conservative"), 1,
+                                                            ifelse(str_detect(participant_political_scale, "konzervativní|conservative"), 2,
+                                                                   ifelse(str_detect(participant_political_scale, "velmi \nliberální|very liberal"), -3,
+                                                                          ifelse(str_detect(participant_political_scale, "spíše liberální|slightly liberal"), -1,
+                                                                                 ifelse(str_detect(participant_political_scale, "liberální|liberal"), -2, NA))))))),
+         participant_optimism_scale = ifelse(str_detect(participant_optimism_scale, "neutrální|neutral"), 0,
+                                             ifelse(str_detect(participant_optimism_scale, "velmioptimistická|veryoptimistic"), 3,
+                                                    ifelse(str_detect(participant_optimism_scale, "spíšeoptimistická|slightlyoptimistic"), 1,
+                                                           ifelse(str_detect(participant_optimism_scale, "optimistická|optimistic"), 2,
+                                                                  ifelse(str_detect(participant_optimism_scale, "velmipesimistická|verypessimistic"), -3,
+                                                                         ifelse(str_detect(participant_optimism_scale, "spíšepesimistická|slightlypessimistic"), -1,
+                                                                                ifelse(str_detect(participant_optimism_scale, "pesimistická|pessimistic"), -2, NA))))))),
+         participant_location_scale = ifelse(str_detect(participant_location_scale, "neutrální|neutral"), 0,
+                                             ifelse(str_detect(participant_location_scale, "velmi městské|very urban"), 3,
+                                                    ifelse(str_detect(participant_location_scale, "spíše městské|slightly urban"), 1,
+                                                           ifelse(str_detect(participant_location_scale, "městské|urban"), 2,
+                                                                  ifelse(str_detect(participant_location_scale, "velmi venkovské|very rural"), -3,
+                                                                         ifelse(str_detect(participant_location_scale, "spíše venkovské|slightly rural"), -1,
+                                                                                ifelse(str_detect(participant_location_scale, "venkovské|rural"), -2, NA)))))))
+         ) %>%
+  mutate(participant_sample = ifelse(str_detect(survey_version, "prolific"), "prolific", "university"))
+
+```
+
+```{r}
+sociolex_ratings_long_words_raw <- multipic_data_words_cz %>%
+  bind_rows(sociolex_data) %>%
+  bind_rows(prolific_data)
+
+sociolex_ratings_long_images_raw <- multipic_data_colour_cz %>%
+  mutate(version = "cz_colour") %>%
+  bind_rows(multipic_data_gray_cz %>%
+              mutate(version = "cz_gray"))
+
+```
+
+# Removing unfinished responses
+
+Before we start filtering data based on the way participants rated words, we will look at how many participants did not finish the task and whether we can afford losing their responses.
+
+First, we look at the distribution of Progress, i.e. how many participants finished, how many gave up at the start, in the middle etc.
+
+```{r}
+sociolex_demographics_all %>%
+  ggplot(aes(x = Progress, colour = version)) +
+  geom_density() +
+  theme_bw()
+
+```
+
+The plot shows that the vast majority completed the experiment, and those who haven't mostly gave up already in the beginning - thus, it seems including only complete responses is a good way to go: it is a clear criterion and we are not going to lose much data (as we can see in the chunk below, if the Progress threshold is 100 we lose 795 responses, if we reset it to 80, we lose 675). We will set the threshold to 90, so that also participants who completed all the ratings but did not finish the final feedback page.
+
+```{r}
+# filter based on completion
+incomplete <- sociolex_demographics_all %>%
+  filter(Progress < 90)
+
+# how many responses did we lose this way?
+nrow(incomplete)
+
+# how many percent is it?
+nrow(incomplete) / nrow(sociolex_demographics_all)
+
+```
+
+Let's filter them out.
+
+```{r}
+sociolex_demographics_all_complete <- sociolex_demographics_all %>%
+  filter(Progress > 90)
+
+nrow(sociolex_demographics_all_complete)
+
+```
+
+# Data subsets
+
+To make sure we can pre-process the different data sets individually, i.e. words and images, we will first make subsets of the data.
+
+```{r}
+sociolex_demographics_all_complete_words <- sociolex_demographics_all_complete %>%
+  filter(str_detect(version, "words"))
+
+sociolex_demographics_all_complete_images <- sociolex_demographics_all_complete %>%
+  filter(str_detect(version, "colour|gray"))
+
+```
+
+# Save the data
+
+```{r}
+write_delim(sociolex_ratings_long_words_raw, "sociolex_data/raw/sociolex_ratings_long_words_raw.csv", delim = ",")
+
+write_delim(sociolex_ratings_long_images_raw, "sociolex_data/raw/sociolex_ratings_long_images_raw.csv", delim = ",")
+
+write_delim(sociolex_demographics_all_complete_words %>%
+  select(-participant_email_address), "sociolex_data/raw/sociolex_demographics_all_complete_words_raw.csv", delim = ",")
+
+write_delim(sociolex_demographics_all_complete_images %>%
+  select(-participant_email_address), "sociolex_data/raw/sociolex_demographics_all_complete_images_raw.csv", delim = ",")
+
+```
+

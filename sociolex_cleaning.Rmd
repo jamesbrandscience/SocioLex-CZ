@@ -1,0 +1,977 @@
+---
+title: "SocioLex-CZ Norms: Data processing and filtering"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: cosmo
+    toc: true
+    toc_float: true
+    collapsed: false
+    df_print: paged
+    code_folding: show
+---
+
+<style>
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #95A044;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Libraries
+
+```{r}
+library(tidyverse)
+
+```
+
+# Data
+
+```{r message=FALSE}
+sociolex_ratings_long_words <- read_delim("sociolex_data/raw/sociolex_ratings_long_words_raw.csv")
+
+sociolex_ratings_long_images <- read_delim("sociolex_data/raw/sociolex_ratings_long_images_raw.csv")
+
+sociolex_demographics_all_complete_words <- read_delim("sociolex_data/raw/sociolex_demographics_all_complete_words_raw.csv")
+
+sociolex_demographics_all_complete_images <- read_delim("sociolex_data/raw/sociolex_demographics_all_complete_images_raw.csv")
+
+extra_words <- read_csv("sociolex_data/coding/extra_words.csv")
+
+```
+
+# Word ratings long
+
+Now we can process the word ratings into a long format.
+
+1. Bind all the rows with word data
+2. Filter out participants who are not in the filtered demographics `sociolex_demographics_all_filtered_language_age`
+3. Tidy up the data so that it is in a more usable format
+4. Remove the age dimension, so only gender, location, political and valence are in this object
+5. Recode the ratings to numeric
+
+```{r}
+sociolex_ratings_long_words_extra <- sociolex_ratings_long_words %>%
+  filter(Response_ID %in% sociolex_demographics_all_complete_words$Response_ID) %>%
+  mutate(name = ifelse(!str_detect(name, " - ") & str_detect(name, "political science"), "political - political science",
+                       ifelse(!str_detect(name, " - ") & str_detect(name, "gender"), "gender - gender", name))) %>%
+  separate(name, into = c("dimension", "item"), sep = " - ") %>%
+  mutate(item = str_remove_all(item, "\\..*")) %>%
+  filter(dimension != "age") %>%
+  mutate(value1 = ifelse(value %in% c("Toto slovo neznám"), NA,
+                         ifelse(value %in% c("silně ženské", "velmi městské", "velmi konzervativní", "velmi pozitivní"), 3,
+                         ifelse(value %in% c("ženské", "městské", "konzervativní", "pozitivní"), 2,
+                         ifelse(value %in% c("spíše ženské", "spíše městské", "spíše konzervativní", "spíše pozitivní"), 1,
+                         ifelse(value %in% c("neutrální"), 0,
+                         ifelse(value %in% c("spíše mužské", "spíše venkovské", "spíše liberální", "spíše negativní"), -1,
+                         ifelse(value %in% c("mužské", "venkovské", "liberální", "negativní"), -2,
+                         ifelse(value %in% c("silně mužské", "velmi venkovské", "velmi liberální", "velmi negativní"), -3, -999
+                         ))))))))) %>%
+  mutate(language = "cz",
+         version = "words")
+
+```
+
+# Age data long
+
+The age data is different from the other dimensions, so it needs to be processed in a different way.
+
+The dimension was the last part of the experiment, so we will filter out any participants who did not complete this dimension.
+
+We will do the following:
+
+1. Bind all the rating data
+2. Filter out participants not in the `sociolex_demographics_all_filtered_language_age` object
+3. Tidy up the data so that it is in a more usable format
+4. Keep only the age dimension
+5. Make the data in a more useable format, where each age category is a column with 1 if it has been selected and NA if it was not
+6. Count how many categories were selected per word, per participant - see `age_sum`
+7. Divide the values assigned to each age category, e.g. if 0-6 and 7-17 were selected, age_sum = 2, so 0-6 will now be 1/2, and 7-17 will also be 1/2 or 0.5
+8. Remove items for ratings that were not known by the participant
+9. Add a tally which counts the number of participants who rated the item or left it blank
+10. Make the data into long format, containing `age_rating_aggregated`, where any values with 0 mean they were not selected by the participant, all other values will be based on the 1/age_sum calculation
+
+```{r}
+sociolex_ratings_long_words_age_extra1 <- sociolex_ratings_long_words %>%
+  filter(Response_ID %in% sociolex_demographics_all_complete_words$Response_ID) %>%
+  mutate(name = ifelse(!str_detect(name, " - ") & str_detect(name, "political science"), "political - political science",
+                       ifelse(!str_detect(name, " - ") & str_detect(name, "gender"), "gender - gender", name))) %>%
+  separate(name, into = c("dimension", "item"), sep = " - ") %>%
+  mutate(item = str_remove_all(item, "\\..*")) %>%
+  filter(dimension == "age") %>%
+  rename(age = value) %>%
+  separate_rows(age, sep = ",") %>%
+  mutate(age = factor(age, levels = c("0-6", "7-17", "18-30", "31-50", "51-65", "66-80", "81 a více", "Toto slovo neznám", "NA"), ordered = TRUE),
+         age_value = ifelse(is.na(age), 1, 1)) %>%
+  pivot_wider(names_from = age, values_from = age_value) %>%
+  group_by_all() %>%
+  mutate(age_sum = sum(`0-6`, `7-17`, `18-30`, `31-50`, `51-65`, `66-80`, `81 a více`, na.rm = TRUE),
+         age_0_6 = `0-6`/age_sum,
+         age_07_17 = `7-17`/age_sum,
+         age_18_30 = `18-30`/age_sum,
+         age_31_50 = `31-50`/age_sum,
+         age_51_65 = `51-65`/age_sum,
+         age_66_80 = `66-80`/age_sum,
+         `age_81+` = `81 a více`/age_sum,
+         age_toto_slovo_neznám = `Toto slovo neznám`,
+         age_žádný = `NA`) %>%
+  ungroup() %>%
+  select(-`66-80`:-`0-6`)
+
+sociolex_ratings_long_words_age_extra <- sociolex_ratings_long_words_age_extra1 %>%
+  filter(is.na(age_toto_slovo_neznám)) %>%
+  select(-age_toto_slovo_neznám) %>%
+  group_by(item) %>%
+  add_tally() %>%
+  ungroup() %>%
+  pivot_longer(age_0_6:age_žádný, names_to = "age_category", values_to = "age_rating_aggregated") %>%
+  group_by(Response_ID, item) %>%
+  mutate(age_rating_aggregated = ifelse(is.na(age_rating_aggregated), 0, age_rating_aggregated)) %>%
+  select(Response_ID, item, n, age_sum, age_category, age_rating_aggregated)
+
+```
+
+# Image ratings long
+
+This process is the same as for the words, there is no age dimension for the images.
+
+We also remove images that do not have "PICTURE" in the item variable, these are face stimuli from a separate experiment and not part of the current norms dataset.
+
+Note the transformation of the location and valence values, which have been multiplied by -1, this is so that they align in the same direction as the word stimuli, i.e. negative values urban/negative, positive values rural/positive
+
+```{r}
+multipic_ratings_long <- sociolex_ratings_long_images %>%
+  mutate(name = str_replace_all(name, "_unknown1", " - unknown")) %>%
+  filter(Response_ID %in% sociolex_demographics_all_complete_images$Response_ID) %>%
+  separate(name, into = c("item", "dimension"), sep = " - ") %>%
+  separate(version, into = c("language", "version")) %>%
+  mutate(dimension = ifelse(str_detect(dimension, "venkovské|rural"), "location",
+                            ifelse(str_detect(dimension, "konzervativní|conservative"), "political",
+                                   ifelse(str_detect(dimension, "ženské|feminine"), "gender",
+                                          ifelse(str_detect(dimension, "negativní|negative"), "valence", dimension))))) %>%
+  pivot_wider(names_from = dimension, values_from = value) %>%
+  mutate(gender = ifelse(is.na(unknown), as.numeric(gender), NA),
+         location = ifelse(is.na(unknown), as.numeric(location)*-1, NA),
+         political = ifelse(is.na(unknown), as.numeric(political), NA),
+         valence = ifelse(is.na(unknown), as.numeric(valence)*-1, NA)) %>%
+  pivot_longer(location:valence, names_to = "dimension", values_to = "value1") %>%
+  rename(value = unknown) %>%
+  mutate(value = ifelse(is.na(value), value1, "unknown")) %>%
+  filter(str_detect(item, "PICTURE"))
+
+```
+
+# Initial sample
+
+Words
+
+```{r}
+n_participants_words <- nrow(sociolex_demographics_all_complete_words)
+
+n_participants_words
+
+n_responses_words <- nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra)
+
+n_responses_words
+
+```
+
+Images
+
+```{r}
+n_participants_images <- nrow(sociolex_demographics_all_complete_images)
+
+n_participants_images
+
+n_responses_images <- nrow(multipic_ratings_long)
+
+n_responses_images
+
+```
+
+# Demographic filtering
+
+## Words
+
+### Language filtering
+
+This is a basic filtering of the participants based on demographic information. First, we exclude participants who are not native speakers of Czech.
+
+```{r}
+# filter based on L1 Czech
+sociolex_demographics_all_words_filtered_language <- sociolex_demographics_all_complete_words %>%
+  filter(participant_language == "Czech",
+         is.na(participant_language_other))
+
+sociolex_ratings_long_words_extra <- sociolex_ratings_long_words_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language$Response_ID)
+
+sociolex_ratings_long_words_age_extra <- sociolex_ratings_long_words_age_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language$Response_ID)
+
+```
+
+```{r}
+n_participants_words - nrow(sociolex_demographics_all_words_filtered_language)
+
+n_participants_words <- nrow(sociolex_demographics_all_words_filtered_language)
+
+n_participants_words
+
+n_responses_words - (nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra))
+
+n_responses_words <- nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra)
+
+n_responses_words
+
+```
+
+### Age filtering
+
+We will also filter responses based on participants' age. As first, we will again look at the distribution.
+
+```{r}
+sociolex_demographics_all_words_filtered_language %>%
+  ggplot() +
+  geom_density(aes(x = participant_age, colour = version)) +
+  geom_vline(xintercept = c(18, 30), linetype = 2) +
+  theme_bw()
+
+```
+
+The plot shows the participant age distribution in the experiment versions. At a face value, the interval between 18 and 30 years of age seems like a sensible choice.
+
+```{r}
+# filter based on participant age
+sociolex_demographics_all_words_filtered_language_age <- sociolex_demographics_all_words_filtered_language %>%
+  filter(participant_age %in% 18:30)
+
+sociolex_ratings_long_words_extra <- sociolex_ratings_long_words_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age$Response_ID)
+
+sociolex_ratings_long_words_age_extra <- sociolex_ratings_long_words_age_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age$Response_ID)
+
+```
+
+
+```{r}
+n_participants_words - nrow(sociolex_demographics_all_words_filtered_language_age)
+
+n_participants_words <- nrow(sociolex_demographics_all_words_filtered_language_age)
+
+n_participants_words
+
+n_responses_words - (nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra))
+
+n_responses_words <- nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra)
+
+n_responses_words
+
+```
+
+## Images
+
+### Language filtering
+
+This is a basic filtering of the participants based on demographic information. First, we exclude participants who are not native speakers of Czech.
+
+```{r}
+# filter based on L1 Czech
+sociolex_demographics_all_images_filtered_language <- sociolex_demographics_all_complete_images %>%
+  filter(participant_language == "Czech",
+         is.na(participant_language_other))
+
+multipic_ratings_long <- multipic_ratings_long %>%
+  filter(Response_ID %in% sociolex_demographics_all_images_filtered_language$Response_ID)
+
+```
+
+```{r}
+n_participants_images - nrow(sociolex_demographics_all_images_filtered_language)
+
+n_participants_images <- nrow(sociolex_demographics_all_images_filtered_language)
+
+n_participants_images
+
+n_responses_images - nrow(multipic_ratings_long)
+
+n_responses_images <- nrow(multipic_ratings_long)
+
+n_responses_images
+
+```
+
+### Age filtering
+
+We will also filter responses based on participants' age. As first, we will again look at the distribution.
+
+```{r}
+sociolex_demographics_all_images_filtered_language %>%
+  ggplot() +
+  geom_density(aes(x = participant_age, colour = version)) +
+  geom_vline(xintercept = c(18, 30), linetype = 2) +
+  theme_bw()
+
+```
+
+The plot shows the participant age distribution in the experiment versions. At a face value, the interval between 18 and 30 years of age seems like a sensible choice.
+
+```{r}
+# filter based on participant age
+sociolex_demographics_all_images_filtered_language_age <- sociolex_demographics_all_images_filtered_language %>%
+  filter(participant_age %in% 18:30)
+
+multipic_ratings_long <- multipic_ratings_long %>%
+  filter(Response_ID %in% sociolex_demographics_all_images_filtered_language_age$Response_ID)
+
+```
+
+
+```{r}
+n_participants_images - nrow(sociolex_demographics_all_images_filtered_language_age)
+
+n_participants_images <- nrow(sociolex_demographics_all_images_filtered_language_age)
+
+n_participants_images
+
+n_responses_images - nrow(multipic_ratings_long)
+
+n_responses_images <- nrow(multipic_ratings_long)
+
+n_responses_images
+
+```
+
+# Data quality filtering
+
+## Item knowledge
+
+### Words
+
+```{r}
+unknown_participants_words <- sociolex_ratings_long_words_extra %>%
+  group_by(Response_ID) %>%
+  summarise(prop_unknown = mean(value == "Toto slovo neznám", na.rm = TRUE))
+
+nrow(unknown_participants_words %>% filter(prop_unknown > 0.2))
+
+```
+
+No one to be excluded.
+
+### Images
+
+```{r}
+unknown_participants_pictures <- multipic_ratings_long %>%
+  group_by(Response_ID) %>% 
+  summarise(prop_unknown = mean(value == "unknown"))
+
+nrow(unknown_participants_pictures %>% filter(prop_unknown > 0.2))
+
+```
+
+Again, no one to be excluded.
+
+## Variance of responses - straightlining
+
+We are going to filter out cases when participants did not make use of the whole scale and kept choosing more or less the same option for all words. Again, we will not pay attention to the `age` scale due to the possibility of skipping the rating. Because of the different design, we must analyze the words and pictures separately.
+
+### Words
+
+For each participant, we calculate a proportion how often certain response was selected along certain dimension. Then we filter cases when this proportion was greater than 0.8, meaning the participant chose the option in more than 80% cases.
+
+```{r}
+#create a count of which scale option was chosen and a proportion for each participant and dimension
+response_proportions <- sociolex_ratings_long_words_extra %>%
+  group_by(Response_ID, dimension, value1) %>%
+  summarise(count = n()) %>%
+  mutate(proportion = count / sum(count)) %>%
+  ungroup()
+
+#see which response options were straightlined - always the neutral 0
+response_proportions %>%
+  filter(proportion > 0.8) %>%
+  group_by(value1) %>%
+  count()
+
+#calculate the counts for the age dimension focusing only on responses where one selection was made
+response_proportions_age <- sociolex_ratings_long_words_age_extra %>%
+  mutate(age_rating_aggregated1 = ifelse(age_rating_aggregated == 0, 0, 1)) %>%
+  group_by(Response_ID, age_category, age_rating_aggregated1) %>%
+  summarise(count = n()) %>%
+  mutate(proportion = count / sum(count)) %>%
+  ungroup() %>%
+  select(-count) %>%
+  filter(age_rating_aggregated1 == 1,
+         proportion > 0.8) %>%
+  group_by(Response_ID) %>%
+  add_count() %>%
+  filter(n == 1) %>%
+  mutate(dimension = "age")
+
+#combine the response data
+response_proportions_all <- response_proportions %>%
+  bind_rows(response_proportions_age)
+
+# filter out the responses that have a proportion > 0.8
+monotonous <- response_proportions_all %>%
+  filter(proportion > 0.8)
+
+#inspect the distribution across the dimensions
+monotonous %>%
+  group_by(dimension) %>%
+  count() %>%
+  arrange(-n)
+
+```
+
+This shows that numbers of monotonous responses differ largely between the dimension. This measure of monotonous responses clearly could not distinguish between participants who wanted to make their work easy and those who just did not have strong associations in a particular dimension. From this reason, we will exclude only participants who responded monotonously on all the scales. We will also exclude their responses along the `age` scale.
+
+```{r}
+monotonous_filter <- monotonous %>%
+  group_by(Response_ID) %>% 
+  count() %>% 
+  filter(n > 3)
+
+nrow(monotonous_filter)
+
+```
+
+Responses from ```{r}nrow(monotonous_filter)``` participants were excluded.
+
+```{r}
+sociolex_demographics_all_words_filtered_language_age_monotonous <- sociolex_demographics_all_words_filtered_language_age %>%
+  filter(!Response_ID %in% monotonous_filter$Response_ID)
+
+sociolex_ratings_long_words_extra <- sociolex_ratings_long_words_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous$Response_ID)
+
+sociolex_ratings_long_words_age_extra <- sociolex_ratings_long_words_age_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous$Response_ID)
+
+```
+
+
+```{r}
+n_participants_words - nrow(sociolex_demographics_all_words_filtered_language_age_monotonous)
+
+n_participants_words <- nrow(sociolex_demographics_all_words_filtered_language_age_monotonous)
+
+n_participants_words
+
+n_responses_words - (nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra))
+
+n_responses_words <- nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra)
+
+n_responses_words
+
+```
+
+```{r}
+monotonous_filter_dimension <- response_proportions_all %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous$Response_ID,
+         proportion > 0.95) %>%
+  select(Response_ID, dimension, proportion)
+
+nrow(monotonous_filter_dimension)
+
+monotonous_filter_dimension %>%
+  group_by(dimension) %>%
+  count()
+
+```
+
+
+```{r}
+sociolex_ratings_long_words_extra <- sociolex_ratings_long_words_extra %>%
+  left_join(monotonous_filter_dimension) %>%
+  filter(is.na(proportion)) %>%
+  select(-proportion)
+
+sociolex_ratings_long_words_age_extra <- sociolex_ratings_long_words_age_extra %>%
+  mutate(dimension = "age") %>%
+  left_join(monotonous_filter_dimension) %>%
+  filter(is.na(proportion)) %>%
+  select(-proportion)
+
+n_responses_words - (nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra))
+
+-21164 - 9770
+
+n_responses_words <- nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra)
+
+n_responses_words
+
+```
+
+### Pictures
+
+For each participant, we calculate a proportion of how often certain point on the scale was selected along certain picture. Then we filter cases when this proportion was equal to 1, meaning the participant chose the same points along all scales. Last, we filter out participants who did so in more than 90% cases.
+
+```{r}
+response_proportion_pictures <- multipic_ratings_long %>%
+  group_by(Response_ID, dimension, value, .drop = FALSE) %>%
+  summarise(count = n()) %>%
+  mutate(proportion = count / sum(count)) %>%
+  ungroup()
+
+response_proportion_pictures %>%
+  filter(proportion > 0.8) %>%
+  group_by(dimension) %>%
+  count()
+
+monotonous_images_filter <- response_proportion_pictures %>%
+  filter(proportion > 0.8) %>%
+  group_by(Response_ID) %>%
+  count() %>%
+  filter(n > 2)
+
+nrow(monotonous_images_filter)
+
+monotonous_images_filter_dimension <- response_proportion_pictures %>%
+  filter(!Response_ID %in% monotonous_images_filter$Response_ID) %>%
+  filter(proportion > 0.95) %>%
+  group_by(Response_ID, dimension) %>%
+  count()
+
+nrow(monotonous_images_filter_dimension)
+
+```
+
+```{r}
+sociolex_demographics_all_images_filtered_language_age_monotonous <- sociolex_demographics_all_images_filtered_language_age %>%
+  filter(!Response_ID %in% monotonous_images_filter$Response_ID)
+
+multipic_ratings_long <- multipic_ratings_long %>%
+  filter(Response_ID %in% sociolex_demographics_all_images_filtered_language_age_monotonous$Response_ID)
+
+n_responses_images - nrow(multipic_ratings_long)
+
+n_responses_images <- nrow(multipic_ratings_long)
+
+multipic_ratings_long <- multipic_ratings_long %>%
+  left_join(monotonous_images_filter_dimension) %>%
+  filter(is.na(n)) %>%
+  select(-n)
+
+n_responses_images - nrow(multipic_ratings_long)
+
+n_responses_images <- nrow(multipic_ratings_long)
+
+multipic_ratings_long %>%
+  distinct(Response_ID, dimension) %>%
+  group_by(Response_ID) %>%
+  count() %>%
+  arrange(n)
+
+4040 + 1919
+
+n_responses_images <- nrow(multipic_ratings_long)
+
+```
+
+## Excluding responses based on calibrator words
+
+Each dimension had its own calibrator word which always appeared first and was chosen based on the pilot study. We will have a look at each of them and note down participants who rated them in an opposite manner.
+
+GENDER
+
+The calibrator word for gender dimension was "náhrdelník" ('necklace'). It was expected to be rated on the femininity side of the scale. We will look what amount of participants rated it in the opposite manner and note down their IDs.
+
+```{r}
+# number of participants
+sociolex_ratings_long_words_extra %>%
+  filter(item == "náhrdelník",
+         value1 %in% -3:-1) %>%
+  nrow()
+
+# percentage
+nrow(sociolex_ratings_long_words_extra %>%
+       filter(item == "náhrdelník", value1 %in% -3:-1)) * 100 /
+  nrow(sociolex_demographics_all_words_filtered_language_age_monotonous)
+
+# IDs
+calibration_gender <- sociolex_ratings_long_words_extra %>% 
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous$Response_ID,
+         item == "náhrdelník",
+         value1 %in% -3:-1) %>%
+  select(Response_ID)
+
+```
+
+LOCATION
+
+The calibrator word for location dimension was "metro" ('subway'). It was expected to be rated on the urban side of the scale. We will look what amount of participants rated it in the opposite manner and note down their IDs.
+
+```{r}
+# number of participants
+sociolex_ratings_long_words_extra %>% 
+  filter(item == "metro",
+         value1 %in% -3:-1) %>%
+  nrow()
+
+# percentage
+nrow(sociolex_ratings_long_words_extra %>% filter(item == "metro", value1 %in% -3:-1)) * 100 / nrow(sociolex_demographics_all_words_filtered_language_age_monotonous)
+
+# IDs
+calibration_location <- sociolex_ratings_long_words_extra %>% 
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous$Response_ID,
+         item == "metro",
+         value1 %in% -3:-1) %>%
+  select(Response_ID)
+
+```
+
+POLITICAL
+
+The calibrator word for political dimension was "tradice" ('tradition'). It was expected to be rated on the conservative side of the scale. We will look what amount of participants rated it in the opposite manner and note down their IDs.
+
+```{r}
+# number of participants
+sociolex_ratings_long_words_extra %>% 
+  filter(item == "tradice",
+         value1 %in% -3:-1) %>%
+  nrow()
+
+# percentage
+nrow(sociolex_ratings_long_words_extra %>% filter(item == "tradice", value1 %in% -3:-1)) * 100 / nrow(sociolex_demographics_all_words_filtered_language_age_monotonous)
+
+# IDs
+calibration_political <- sociolex_ratings_long_words_extra %>% 
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous$Response_ID,
+         item == "tradice",
+         value1 %in% -3:-1) %>%
+  select(Response_ID)
+
+```
+
+VALENCE
+
+The calibrator word for valence dimension was "šikanovat" ('to bully'). It was expected to be rated on the negative side of the scale. We will look what amount of participants rated it in the opposite manner and note down their IDs.
+
+```{r}
+# number of participants
+sociolex_ratings_long_words_extra %>% 
+  filter(item == "šikanovat",
+         value1 %in% 1:3) %>%
+  nrow()
+
+# percentage
+nrow(sociolex_ratings_long_words_extra %>% filter(item == "šikanovat", value1 %in% 1:3)) * 100 / nrow(sociolex_demographics_all_words_filtered_language_age_monotonous)
+
+# IDs
+calibration_valence <- sociolex_ratings_long_words_extra %>% 
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous$Response_ID,
+         item == "šikanovat",
+         value1 %in% 1:3) %>%
+  select(Response_ID)
+
+```
+
+AGE
+
+The calibrator word for age dimension was "důchod" ('pension'). It was expected to be associated with either of the 66-80 or 81+ options or with both of them. We will look what amount of participants rated it in a different way and note down their IDs.
+
+```{r}
+calibration_age <- sociolex_ratings_long_words_age_extra %>%
+  ungroup() %>%
+  filter(item == "důchod") %>%
+  pivot_wider(names_from = age_category, values_from = age_rating_aggregated) %>%
+  filter(age_51_65 == 0 & age_66_80 == 0 & `age_81+` == 0) %>%
+  select(Response_ID)
+
+nrow(calibration_age)
+
+```
+
+```{r}
+calibration_filter <- bind_rows(calibration_gender,
+          calibration_location,
+          calibration_political,
+          calibration_valence,
+          calibration_age) %>%
+  group_by(Response_ID) %>%
+  count() %>%
+  filter(n > 1)
+
+nrow(calibration_filter)
+
+```
+
+```{r}
+sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator <- sociolex_demographics_all_words_filtered_language_age_monotonous %>%
+  filter(!Response_ID %in% calibration_filter$Response_ID)
+
+sociolex_ratings_long_words_extra <- sociolex_ratings_long_words_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator$Response_ID)
+
+sociolex_ratings_long_words_age_extra <- sociolex_ratings_long_words_age_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator$Response_ID)
+
+```
+
+```{r}
+n_participants_words - nrow(sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator)
+
+n_participants_words <- nrow(sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator)
+
+n_participants_words
+
+n_responses_words - (nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra))
+
+n_responses_words <- nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra)
+
+n_responses_words
+
+```
+
+## Excluding responses based on control words
+
+```{r}
+control_words_filter <- sociolex_ratings_long_words_extra %>%
+  filter(item %in% extra_words$value,
+         !item %in% c("metro", "náhrdelník", "šikanovat", "tradice")) %>%
+  group_by(Response_ID, dimension, value) %>%
+  count() %>%
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>%
+  rename(unknown = 3) %>%
+  select(Response_ID:unknown) %>%
+  pivot_wider(names_from = dimension, values_from = unknown) %>%
+  left_join(sociolex_ratings_long_words_age_extra1 %>%
+              select(Response_ID, dimension, item, age_toto_slovo_neznám, age_žádný) %>%
+              filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator$Response_ID,
+                     item %in% extra_words$value,
+                     item != "důchod") %>%
+              mutate(age_unknown = ifelse(age_toto_slovo_neznám == 1 | age_žádný == 1, 1, 0),
+                     age_unknown = ifelse(is.na(age_unknown), 0, age_unknown)) %>%
+              group_by(Response_ID, .drop = FALSE) %>%
+              summarise(age = sum(age_unknown))) %>%
+  filter(gender < 1 & location < 1 & political < 1 & valence < 1 & age < 1)
+
+nrow(control_words_filter)
+
+```
+
+```{r}
+sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control <- sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator %>%
+  filter(!Response_ID %in% control_words_filter$Response_ID)
+
+sociolex_ratings_long_words_extra <- sociolex_ratings_long_words_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control$Response_ID)
+
+sociolex_ratings_long_words_age_extra <- sociolex_ratings_long_words_age_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control$Response_ID)
+
+```
+
+```{r}
+n_participants_words - nrow(sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control)
+
+n_participants_words <- nrow(sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control)
+
+n_participants_words
+
+n_responses_words - (nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra))
+
+n_responses_words <- nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra)
+
+n_responses_words
+
+```
+
+## Response time
+
+We want to remove participants who were suspiciously quick and might not have rated the items thoroughly.
+
+We will analyze words and pictures separately since words were rated as a whole set along one dimension at a time, whereas pictures were displayed one by one and always rated along the four dimensions.
+
+### Words
+
+First, let's have a look at word ratings. As we said, participants rated all words along one dimension at a time. Thus, we only know how long it took to each participant to rate the words along the dimension. We will look at the timing distributions.
+
+```{r}
+timing_words <- sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control %>%
+  pivot_longer(timing_gender:timing_age, names_to = "dimension", values_to = "timing") %>%
+  mutate(timing_log = log(timing)) %>%
+  select(Response_ID, dimension, timing:timing_log)
+
+timing_words %>% ggplot() +
+  geom_density(aes(x = timing, colour = dimension)) +
+  theme_bw()
+
+timing_words %>% ggplot() +
+  geom_density(aes(x = timing_log, colour = dimension)) +
+  theme_bw()
+
+```
+
+We will create a table of responses with timing lower than 2.5 * SD below the mean.
+
+```{r}
+timing_words %>%
+  group_by(dimension) %>%
+  summarise(mean_timing_log = mean(timing_log),
+            sd_timing_log = sd(timing_log),
+            lower_bound = mean_timing_log - 2.5 * sd_timing_log) %>%
+  mutate(mean_timing = exp(mean_timing_log),
+         sd_timing = exp(sd_timing_log),
+         lower_bound1 = exp(lower_bound))
+
+```
+
+
+```{r}
+too_quick <- timing_words %>%
+  group_by(dimension) %>%
+  mutate(mean_timing_log = mean(timing_log),
+         sd_timing_log = sd(timing_log),
+         lower_bound = mean_timing_log - 2.5 * sd_timing_log) %>%
+  filter(timing_log < lower_bound) %>%
+  ungroup()
+
+too_quick_filter <- too_quick %>%
+  group_by(Response_ID) %>%
+  count() %>%
+  filter(n > 1)
+
+nrow(too_quick_filter)
+
+```
+
+```{r}
+sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control_timing <- sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control %>%
+  filter(!Response_ID %in% too_quick_filter$Response_ID)
+
+sociolex_ratings_long_words_extra <- sociolex_ratings_long_words_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control_timing$Response_ID)
+
+sociolex_ratings_long_words_age_extra <- sociolex_ratings_long_words_age_extra %>%
+  filter(Response_ID %in% sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control_timing$Response_ID)
+
+```
+
+```{r}
+n_participants_words - nrow(sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control_timing)
+
+n_participants_words <- nrow(sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control_timing)
+
+n_participants_words
+
+n_responses_words - (nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra))
+
+n_responses_words <- nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra)
+
+n_responses_words
+
+```
+
+
+```{r}
+too_quick_filter_dimension <- too_quick %>%
+  filter(!Response_ID %in% too_quick_filter$Response_ID) %>%
+  mutate(dimension = str_remove(dimension, "timing_")) %>%
+  group_by(Response_ID, dimension) %>%
+  count(name = "n_quick")
+
+nrow(too_quick_filter_dimension)
+
+```
+
+```{r}
+sociolex_ratings_long_words_extra <- sociolex_ratings_long_words_extra %>%
+  left_join(too_quick_filter_dimension) %>%
+  filter(is.na(n_quick)) %>%
+  select(-n_quick)
+
+sociolex_ratings_long_words_age_extra <- sociolex_ratings_long_words_age_extra %>%
+  left_join(too_quick_filter_dimension) %>%
+  filter(is.na(n_quick)) %>%
+  select(-n_quick)
+
+```
+
+```{r}
+n_responses_words - (nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra))
+
+-3247 - 2593
+
+n_responses_words <- nrow(sociolex_ratings_long_words_extra) + nrow(sociolex_ratings_long_words_age_extra)
+
+n_responses_words
+
+nrow(sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control_timing)
+
+```
+
+### Images
+
+For picture ratings, we only have timing of the whole experiment. Each participant rated 125 pictures, always along four dimensions. We will inspect the colour picture ratings first.
+
+First, let's see what is the timing distribution.
+
+```{r}
+timing_images <- sociolex_demographics_all_images_filtered_language_age_monotonous %>%
+  mutate(timing = as.numeric(duration),
+         timing_log = log(timing),
+         mean_timing_log = mean(timing_log),
+         sd_timing_log = sd(timing_log),
+         lower_bound = mean_timing_log - 2.5 * sd_timing_log)
+
+timing_images %>%
+  ggplot() +
+  geom_density(aes(x = timing_log)) +
+  geom_vline(xintercept = unique(timing_images$lower_bound), linetype = 2) +
+  theme_bw()
+
+```
+
+We would exclude participants with responses with timing lower than 2.5 * SD below the mean. There were, however, none like that.
+
+```{r}
+too_quick_images <- timing_images %>%
+  filter(timing_log < lower_bound)
+
+# how many responses will be lost?
+nrow(too_quick_images)
+
+```
+
+No responses were excluded.
+
+# Final sample
+
+```{r}
+sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control_timing %>%
+  nrow()
+
+sociolex_ratings_long_words_extra %>%
+  bind_rows(sociolex_ratings_long_words_age_extra) %>%
+  nrow()
+
+sociolex_demographics_all_images_filtered_language_age_monotonous %>%
+  nrow()
+
+multipic_ratings_long %>%
+  nrow()
+
+```
+
+# Save the data
+
+```{r}
+write_delim(sociolex_demographics_all_words_filtered_language_age_monotonous_calibrator_control_timing, "sociolex_data/processed/sociolex_demographics_words.csv", delim = ",")
+
+write_delim(sociolex_demographics_all_images_filtered_language_age_monotonous, "sociolex_data/processed/sociolex_demographics_images.csv", delim = ",")
+
+write_delim(sociolex_ratings_long_words_extra, "sociolex_data/processed/sociolex_ratings_words.csv", delim = ",")
+
+write_delim(sociolex_ratings_long_words_age_extra, "sociolex_data/processed/sociolex_ratings_words_age.csv", delim = ",")
+
+write_delim(multipic_ratings_long, "sociolex_data/processed/sociolex_ratings_images.csv", delim = ",")
+
+```
+
