@@ -50,15 +50,15 @@ R.version
 # Load all the data
 
 ```{r}
-sociolex_demographics_words <- read_csv("sociolex_data/processed/sociolex_demographics_all_filtered_words.csv") # participant demographics
+sociolex_demographics_words <- read_csv("sociolex_data/processed/sociolex_demographics_words.csv") # participant demographics
 
-sociolex_ratings_long_words <- read_csv("sociolex_data/processed/sociolex_ratings_long_words.csv") # raw word ratings along the dimensions of gender, location, political alignment and valence
+sociolex_ratings_long_words <- read_csv("sociolex_data/processed/sociolex_ratings_words.csv") # raw word ratings along the dimensions of gender, location, political alignment and valence
 
-sociolex_ratings_long_words_age <- read_csv("sociolex_data/processed/sociolex_ratings_long_words_age.csv") # raw word ratings along the dimension of age
+sociolex_ratings_long_words_age <- read_csv("sociolex_data/processed/sociolex_ratings_words_age.csv") # raw word ratings along the dimension of age
 
-sociolex_demographics_images <- read_csv("sociolex_data/processed/sociolex_demographics_all_filtered_images.csv") # raw picture ratings along the dimensions of gender, location, political alignment and valence
+sociolex_demographics_images <- read_csv("sociolex_data/processed/sociolex_demographics_images.csv") # raw picture ratings along the dimensions of gender, location, political alignment and valence
 
-sociolex_ratings_long_images <- read_csv("sociolex_data/processed/sociolex_ratings_long_images.csv") # raw picture ratings along the dimensions of gender, location, political alignment and valence
+sociolex_ratings_long_images <- read_csv("sociolex_data/processed/sociolex_ratings_images.csv") # raw picture ratings along the dimensions of gender, location, political alignment and valence
 
 extra_words <- read_delim("sociolex_data/coding/extra_words.csv", delim = ",") %>%
   pull(value)

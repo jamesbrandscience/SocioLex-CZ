@@ -975,3 +975,16 @@ write_delim(multipic_ratings_long, "sociolex_data/processed/sociolex_ratings_ima
 
 ```
 
+```{r}
+sociolex_ratings_long_words_age_extra1 %>%
+  filter(Response_ID %in% sociolex_ratings_long_words_age_extra$Response_ID) %>%
+  group_by(item) %>%
+  summarise(n_sample_age = n(),
+            n_unknown_age = sum(age_toto_slovo_neznám, na.rm = TRUE),
+            n_known_age = (n_sample_age - n_unknown_age),
+            prop_known_age = n_known_age/n_sample_age) %>%
+  select(-n_unknown_age) %>%
+  write_delim("sociolex_data/processed/sociolex_n_ratings_age.csv", delim = ",")
+
+```
+
