@@ -1,0 +1,42 @@
+﻿Variable,Description,Values
+item,The item name in Czech that was normed,"For words, this is the Czech word, for images these are in the format of PICTURE_XXX_colour or PICTURE_XXX_gray for colour/gray versions"
+word_english,The item name in English (translated),"For words, this is the English translation of the Czech word, for images these are the British English names for the picture from the MultiLingual Picture Database"
+mean_gender,The mean rating for the gender dimension,negative values = more masculine<br/>positive values = more feminine<br/>0 = neutral
+mean_location,The mean rating for the location dimension,negative values = more rural<br/>positive values = more urban<br/>0 = neutral
+mean_political,The mean rating for the valence dimension,negative values = more negative<br/>positive values = more positive<br/>0 = neutral
+mean_valence,The mean rating for the political dimension,negative values = more liberal<br/>positive values = more conservative<br/>0 = neutral
+age_PC1,The value of Principal Component 1 for the age dimension,negative values = more older age<br/>positive values = more younger age
+age_PC2,The value of Principal Component 2 for the age dimension,negative values = more middle aged<br/>positive values = more young/old age
+age_PC3,The value of Principal Component 3 for the age dimension,negative values = more no age association<br/>positive values = more old age<br/>0 = neutral
+sd_gender,The standard deviation for the gender dimension,values closer to 0 = less variance from the mean<br/>larger values = more variance from the mean
+sd_location,The standard deviation for the location dimension,values closer to 0 = less variance from the mean<br/>larger values = more variance from the mean
+sd_political,The standard deviation for the valence dimension,values closer to 0 = less variance from the mean<br/>larger values = more variance from the mean
+sd_valence,The standard deviation for the political dimension,values closer to 0 = less variance from the mean<br/>larger values = more variance from the mean
+latent_mean_gender,The latent mean rating for the gender dimension,negative values = more masculine<br/>positive values = more feminine<br/>0 = neutral
+latent_mean_location,The latent mean rating for the location dimension,negative values = more rural<br/>positive values = more urban<br/>0 = neutral
+latent_mean_political,The latent mean rating for the valence dimension,negative values = more negative<br/>positive values = more positive<br/>0 = neutral
+latent_mean_valence,The latent mean rating for the political dimension,negative values = more liberal<br/>positive values = more conservative<br/>0 = neutral
+entropy_gender,The entropy for the gender dimension,values closer to 0 = more homogenous<br/>larger values = more heterogenous
+entropy_location,The entropy for the location dimension,values closer to 0 = more homogenous<br/>larger values = more heterogenous
+entropy_political,The entropy for the valence dimension,values closer to 0 = more homogenous<br/>larger values = more heterogenous
+entropy_valence,The entoopy for the political dimension,values closer to 0 = more homogenous<br/>larger values = more heterogenous
+n_sample_gender,The number of participants sampled for the gender dimension,
+n_sample_location,The number of participants sampled for the location dimension,
+n_sample_political,The number of participants sampled for the political dimension,
+n_sample_valence,The number of participants sampled for the valence dimension,
+n_sample_age,The number of participants sampled for the age dimension,
+n_known_gender,The number of participants who knew the item for the gender dimension,
+n_known_location,The number of participants who knew the item for the location dimension,
+n_known_political,The number of participants who knew the item for the political dimension,
+n_known_valence,The number of participants who knew the item for the valence dimension,
+n_known_age,The number of participants who knew the item for the age dimension,
+prop_known_gender,The poroportion of participants who knew the item for the gender dimension,
+prop_known_location,The poroportion of participants who knew the item for the location dimension,
+prop_known_political,The poroportion of participants who knew the item for the political dimension,
+prop_known_valence,The poroportion of participants who knew the item for the valence dimension,
+prop_known_age,The poroportion of participants who knew the item for the age dimension,
+word_czech,The item name in Czech,"For words, this is the Czech word, for images these are the Czech names for the picture from the MultiLingual Picture Database"
+gramm_gend,The grammatical gender of the item,f = feminine<br/>m = masculine<br/>n = neuter<br/>a = ambiguous<br/>! = plural<br/>empty = not applicable
+animacy,The animacy of the item,a= animate<br/>i = inaminate<br/>empty = not applicable
+pos,The part of speech for the item,noun/adjective/verb/other
+stim_type,The stimulus type of the item,Word/Colour/Gray

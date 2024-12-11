@@ -1,0 +1,9 @@
+﻿dimension,rating,prop,label,hjust
+gender,-3,1,masc,0
+gender,3,1,fem,1
+location,-3,1,rural,0
+location,3,1,urban,1
+political,-3,1,lib,0
+political,3,1,cons,1
+valence,-3,1,neg,0
+valence,3,1,pos,1
